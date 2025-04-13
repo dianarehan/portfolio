@@ -1,9 +1,10 @@
+import { lazy } from 'react';
 import config from '~/config.json';
 
 export const navLinks = [
   {
     label: 'Personal Projects',
-    pathname: '/#project-1',
+    pathname: '/#personal-projects',
   },
   {
     label: 'Details',
@@ -20,29 +21,19 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  // {
-  //   label: 'Bluesky',
-  //   url: `https://bsky.app/profile/${config.bluesky}`,
-  //   icon: 'bluesky',
-  // },
-  // {
-  //   label: 'Figma',
-  //   url: `https://www.figma.com/${config.figma}`,
-  //   icon: 'figma',
-  // },
   {
     label: 'LinkedIn',
     url: `https://www.linkedin.com/in/${config.linkedin}`,
     icon: 'linkedin',
   },
-  // {
-  //   label: 'Twitter',
-  //   url: `https://twitter.com/${config.twitter}`,
-  //   icon: 'twitter',
-  // },
   {
     label: 'Github',
     url: `https://github.com/${config.github}`,
     icon: 'github',
   },
+  {
+    label: 'Itch.io',
+    url: `${config.itch}`,
+    icon: 'itch.io',
+  }
 ];

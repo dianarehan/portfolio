@@ -18,7 +18,7 @@ import imageSprDesignSystemLightPlaceholder from '~/assets/spr-design-system-lig
 import imageSprDesignSystemLight from '~/assets/spr-design-system-light.png';
 import imageSprLessonBuilderDarkLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import imageSprLessonBuilderDarkPlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import imageSprLessonBuilderDark from '~/assets/spr-lesson-builder-dark.jpg';
+import tempoDashGIF from '~/assets/GIF-showcase.gif';
 import imageSprLessonBuilderLightLarge from '~/assets/spr-lesson-builder-light-large.jpg';
 import imageSprLessonBuilderLightPlaceholder from '~/assets/spr-lesson-builder-light-placeholder.jpg';
 import imageSprLessonBuilderLight from '~/assets/spr-lesson-builder-light.jpg';
@@ -63,7 +63,8 @@ import {
 import { baseMeta } from '~/utils/meta';
 import { Suspense, lazy, useMemo } from 'react';
 import { media } from '~/utils/style';
-import styles from './tempo-dash.module.css';
+
+
 
 const Earth = lazy(() => import('./earth').then(module => ({ default: module.Earth })));
 const EarthSection = lazy(() =>
@@ -102,23 +103,18 @@ export const SmartSparrow = () => {
           url="https://dianarehan.itch.io/tempo-dash"
           // roles={roles}
         />
+
         <ProjectSection padding="top">
           <ProjectSectionContent>
+              <ProjectSectionHeading as='h5'>Featuring Tame Impala XD</ProjectSectionHeading>
             <ProjectImage
               raised
               key={theme}
               srcSet={
-                isDark
-                  ? `${imageSprLessonBuilderDark} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
-                  : `${imageSprLessonBuilderLight} 1280w, ${imageSprLessonBuilderLightLarge} 2560w`
+                `${tempoDashGIF} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
               }
               width={1280}
               height={800}
-              placeholder={
-                isDark
-                  ? imageSprLessonBuilderDarkPlaceholder
-                  : imageSprLessonBuilderLightPlaceholder
-              }
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="Dancing GIF of a character in a 3D environment with a colourful background."
             />
