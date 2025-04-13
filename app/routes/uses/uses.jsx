@@ -28,38 +28,32 @@ export const Uses = () => {
   return (
     <>
       <ProjectContainer className={styles.uses}>
-        <ProjectBackground
+        {/* <ProjectBackground
           src={usesBackground}
           placeholder={usesBackgroundPlaceholder}
           opacity={0.7}
-        />
+        /> */}
         <ProjectHeader
           title="Uses"
-          description="A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to design and code things. And yeah, that is a Johnny Mnemonic GIF in the background."
+          description="A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to do everything."
         />
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
-              <ProjectSectionHeading>Design</ProjectSectionHeading>
+              <ProjectSectionHeading>Design and Manage</ProjectSectionHeading>
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
                     <Link href="https://www.figma.com">Figma</Link> is my primary tool for
-                    UI design these days. Made the switch from Sketch in 2020 and haven’t
-                    looked back. I’ve also created{' '}
-                    <Link href="https://www.figma.com/@hamish">a few plugins</Link> that
-                    you can install.
+                    UI design these days.
                   </ListItem>
                   <ListItem>
-                    Any motion graphics I create are created in Adobe After Effects. So
-                    far I haven’t found a non-Adobe product that’s as good. If anyone has
-                    suggestions please <Link href="/contact">message me</Link>.
+                    For planning and organizing I use{' '}
+                    <Link href="https://trello.com/">Trello</Link>, it really made my life easier. 
                   </ListItem>
                   <ListItem>
-                    For any 3D models and video editing I use{' '}
-                    <Link href="https://www.blender.org/">Blender</Link>. Since 2.8 it’s
-                    become way simpler to use and in a lot of ways better than expensive
-                    paid tools like 3DS Max or Maya.
+                    I use{' '}
+                    <Link href="https://www.canva.com/">Canva</Link> for really quick designs for my games when puplishing out a game jam on <Link href="https://dianarehan.itch.io/">itch.io</Link>
                   </ListItem>
                 </List>
               </ProjectSectionText>
@@ -69,52 +63,25 @@ export const Uses = () => {
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
-              <ProjectSectionHeading>Development</ProjectSectionHeading>
+              <ProjectSectionHeading>Development tools</ProjectSectionHeading>
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    I use <Link href="https://vscodium.com/">VSCodium</Link> as my text
-                    editor, with the Tokyo Night theme and Operator Mono as my typeface of
-                    choice.
+                    I basically use <Link href="https://unity.com/products/unity-engine">Unity</Link> as my current game engine,
+                    hopefully I’ll be able to switch to <Link href="https://www.unrealengine.com/en-US/">Unreal Engine</Link> in the future.
                   </ListItem>
                   <ListItem>
-                    Firefox is my main browser for both development and general use.
+                    Brave is my main browser for both development and general use.
                   </ListItem>
                   <ListItem>
-                    <Link href="https://reactjs.org/">React</Link> is my front end
-                    Javascript library of choice. The component-centric mental model is
-                    the first thing that truly made sense to me as a designer.
-                  </ListItem>
-                  <ListItem>
-                    For 3D effects and image shaders I use{' '}
-                    <Link href="https://threejs.org/">three.js</Link>. It has a bit of a
-                    learning curve but you can do some really powerful stuff with it.
-                  </ListItem>
-                  <ListItem>
-                    For CSS I’ve used a myriad pre-processors and css-in-js solutions like
-                    styled-components, but these days I’m using vanilla CSS with{' '}
-                    <Link href="https://postcss.org/">PostCSS</Link> to get upcoming CSS
-                    features today.
-                  </ListItem>
-                  <ListItem>
-                    For Javascript animations I use{' '}
-                    <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it’s
-                    a great way to add spring animations to React and three.js.
-                  </ListItem>
-                  <ListItem>
-                    For building and testing UI components in isolation I use{' '}
-                    <Link href="https://storybook.js.org/">Storybook</Link>. Check out the{' '}
-                    <Link href="https://storybook.hamishw.com">
-                      storybook for this website
-                    </Link>
-                    .
-                  </ListItem>
+                  I often work with the <Link href="https://www.mongodb.com/mern-stack">MERN stack</Link> (MongoDB, Express.js, React, Node.js) for full-stack web development projects.
+                </ListItem>
                 </List>
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
-        <ProjectSection padding="none" className={styles.section}>
+        {/* <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
               <ProjectSectionHeading>System</ProjectSectionHeading>
@@ -160,7 +127,7 @@ export const Uses = () => {
               </Table>
             </ProjectTextRow>
           </ProjectSectionContent>
-        </ProjectSection>
+        </ProjectSection> */}
       </ProjectContainer>
       <Footer />
     </>

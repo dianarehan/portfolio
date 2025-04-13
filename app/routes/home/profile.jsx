@@ -21,17 +21,16 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
+      I’m Diana, currently working as a VR developer intern at{' '}
+      <Link href="https://www.it-qan.com/">ITQAN for smart solutions</Link>. My portfolio includes personal games developed during game jams in my free time, alongside professional VR interaction scenarios created as part of my work.
+       If you’re interested in the tools and software I
       use check out my <Link href="/uses">uses page</Link>.
     </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
+    {/* <Text className={styles.description} data-visible={visible} size="l" as="p">
       In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
       <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
       about new projects, so feel free to drop me a line.
-    </Text>
+    </Text> */}
   </Fragment>
 );
 
@@ -53,31 +52,20 @@ export const Profile = ({ id, visible, sectionRef }) => {
       <Transition in={visible || focused} timeout={0}>
         {({ visible, nodeRef }) => (
           <div className={styles.content} ref={nodeRef}>
-            <div className={styles.column}>
-              <ProfileText visible={visible} titleId={titleId} />
-              <Button
-                secondary
-                className={styles.button}
-                data-visible={visible}
-                href="/contact"
-                icon="send"
-              >
-                Send me a message
-              </Button>
-            </div>
-            <div className={styles.column}>
+                        <div className={styles.column}>
               <div className={styles.tag} aria-hidden>
-                <Divider
+              <Divider
                   notchWidth="64px"
                   notchHeight="8px"
                   collapsed={!visible}
                   collapseDelay={1000}
                 />
+                <br/>
                 <div className={styles.tagText} data-visible={visible}>
                   About me
                 </div>
               </div>
-              <div className={styles.image}>
+              {/* <div className={styles.image}>
                 <Image
                   reveal
                   delay={100}
@@ -91,8 +79,21 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 <svg className={styles.svg} data-visible={visible} viewBox="0 0 136 766">
                   <use href={`${katakana}#katakana-profile`} />
                 </svg>
-              </div>
+              </div> */}
             </div>
+            <div className={styles.column}>
+              <ProfileText visible={visible} titleId={titleId} />
+              {/* <Button
+                secondary
+                className={styles.button}
+                data-visible={visible}
+                href="/contact"
+                icon="send"
+              >
+                Send me a message
+              </Button> */}
+            </div>
+
           </div>
         )}
       </Transition>
