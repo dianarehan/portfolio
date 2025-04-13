@@ -1,4 +1,4 @@
-import backgroundSprLarge from '~/assets/spr-background-large.jpg';
+import backgroundSprLarge from '~/assets/free-background.png';
 import backgroundSprPlaceholder from '~/assets/spr-background-placeholder.jpg';
 import imageSprBackgroundVolcanismLarge from '~/assets/spr-background-volcanism-large.jpg';
 import imageSprBackgroundVolcanismPlaceholder from '~/assets/spr-background-volcanism-placeholder.jpg';
@@ -63,22 +63,16 @@ import {
 import { baseMeta } from '~/utils/meta';
 import { Suspense, lazy, useMemo } from 'react';
 import { media } from '~/utils/style';
-import styles from './smart-sparrow.module.css';
+import styles from './tempo-dash.module.css';
 
 const Earth = lazy(() => import('./earth').then(module => ({ default: module.Earth })));
 const EarthSection = lazy(() =>
   import('./earth').then(module => ({ default: module.EarthSection }))
 );
 
-const title = 'Designing the future of education';
+const title = 'Tempo Dash 3D rhythm game';
 const description =
-  'I worked as the design lead on a major iteration of Smart Sparrow’s product. We took the platform in a bold new direction, focusing on becoming the best tool for learning designers.';
-const roles = [
-  'Art Direction',
-  'UX and UI Design',
-  'Front End Development',
-  'Motion Design',
-];
+  'Get ready to dash to the rhythm in Tempo Dash, a fast-paced 3D rhythm game built in Unity! Hit tempo-based arrows, move with precision, and vibe with 3 music tracks that get your heart pumping.';
 
 export const meta = () => {
   return baseMeta({ title, description, prefix: 'Projects' });
@@ -105,8 +99,8 @@ export const SmartSparrow = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.smartsparrow.com/"
-          roles={roles}
+          url="https://dianarehan.itch.io/tempo-dash"
+          // roles={roles}
         />
         <ProjectSection padding="top">
           <ProjectSectionContent>
@@ -126,11 +120,11 @@ export const SmartSparrow = () => {
                   : imageSprLessonBuilderLightPlaceholder
               }
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-              alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
+              alt="Dancing GIF of a character in a 3D environment with a colourful background."
             />
           </ProjectSectionContent>
         </ProjectSection>
-        <ProjectSection>
+        {/* <ProjectSection>
           <ProjectTextRow>
             <ProjectSectionHeading>The problem</ProjectSectionHeading>
             <ProjectSectionText>
@@ -143,8 +137,8 @@ export const SmartSparrow = () => {
               new users, but with plenty of room to scale for advanced users.
             </ProjectSectionText>
           </ProjectTextRow>
-        </ProjectSection>
-        <ProjectSection light={isDark}>
+        </ProjectSection> */}
+        {/* <ProjectSection light={isDark}>
           <ProjectSectionContent>
             <Image
               key={theme}
@@ -160,10 +154,10 @@ export const SmartSparrow = () => {
                   ? imageSprComponentsDarkPlaceholder
                   : imageSprComponentsLightPlaceholder
               }
-              alt={`A set of ${theme} themed components for the aero design system`}
+              alt={``}
               sizes="100vw"
-            />
-            <ProjectTextRow>
+            /> */}
+            {/* <ProjectTextRow>
               <SegmentedControl
                 currentIndex={themes.indexOf(theme)}
                 onChange={handleThemeChange}
@@ -171,8 +165,8 @@ export const SmartSparrow = () => {
                 <SegmentedControlOption>Dark theme</SegmentedControlOption>
                 <SegmentedControlOption>Light theme</SegmentedControlOption>
               </SegmentedControl>
-            </ProjectTextRow>
-            <ProjectTextRow>
+            </ProjectTextRow> */}
+            {/* <ProjectTextRow>
               <ProjectSectionHeading>The aero design system</ProjectSectionHeading>
               <ProjectSectionText>
                 To streamline the design process across designers and engineers for such a
@@ -181,10 +175,10 @@ export const SmartSparrow = () => {
                 cycle. This would inform both the aesthetics and user experience across
                 the product itself as well as the website and marketing material.
               </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
+            </ProjectTextRow> */}
+          {/* </ProjectSectionContent>
+        </ProjectSection> */}
+        {/* <ProjectSection>
           <ProjectSectionContent>
             <Image
               raised
@@ -214,8 +208,8 @@ export const SmartSparrow = () => {
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
-        </ProjectSection>
-        <ThemeProvider theme="dark" data-invert>
+        </ProjectSection> */}
+        {/* <ThemeProvider theme="dark" data-invert>
           <ProjectSection
             backgroundOverlayOpacity={0.5}
             backgroundElement={
@@ -253,8 +247,8 @@ export const SmartSparrow = () => {
               />
             </ProjectSectionColumns>
           </ProjectSection>
-        </ThemeProvider>
-        <ProjectSection>
+        </ThemeProvider> */}
+        {/* <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
               <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
@@ -285,8 +279,8 @@ export const SmartSparrow = () => {
               sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
             />
           </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
+        </ProjectSection> */}
+        {/* <ProjectSection>
           <ProjectSectionColumns>
             <ProjectSectionContent>
               <ProjectTextRow>
@@ -339,8 +333,8 @@ export const SmartSparrow = () => {
               />
             </div>
           </ProjectSectionColumns>
-        </ProjectSection>
-        <ThemeProvider theme="dark" data-invert>
+        </ProjectSection> */}
+        {/* <ThemeProvider theme="dark" data-invert>
           <Suspense>
             <Earth
               className={styles.earth}
@@ -520,8 +514,8 @@ export const SmartSparrow = () => {
               />
             </Earth>
           </Suspense>
-        </ThemeProvider>
-        <ProjectSection>
+        </ThemeProvider> */}
+        {/* <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow center centerMobile noMargin>
               <svg
@@ -548,7 +542,7 @@ export const SmartSparrow = () => {
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
-        </ProjectSection>
+        </ProjectSection> */}
       </ProjectContainer>
       <Footer />
     </>

@@ -15,7 +15,7 @@ const initDelay = 300;
 export function ProjectHeader({
   title,
   description,
-  linkLabel = 'Visit website',
+  linkLabel = 'Play the Game on itch.io',
   url,
   roles,
   className,
