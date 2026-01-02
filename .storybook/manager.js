@@ -6,6 +6,6 @@ addons.setConfig({
     ...themes.dark,
     brandImage: '.storybook/whiteD.png',
     brandTitle: 'Diana Rehan Components',
-    brandUrl: 'https://hamishw.com',
+    brandUrl: 'https://dianarehan.github.io/portfolio',
   },
 });

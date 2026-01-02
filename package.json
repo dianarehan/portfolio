@@ -1,9 +1,9 @@
 {
-  "name": "portfolio",
-  "homepage": "https://hamishw.com",
+  "name": "dianarehan",
+  "homepage": "https://dianarehan.github.io/portfolio",
   "description": "Portfolio site for Hamish Williams",
-  "repository": "https://github.com/HamishMW/portfolio.git",
-  "author": "Hamish Williams",
+  "repository": "https://github.com/dianarehan/portfolio",
+  "author": "Diana Rehan",
   "sideEffects": false,
   "type": "module",
   "scripts": {

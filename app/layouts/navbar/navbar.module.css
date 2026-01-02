@@ -137,6 +137,11 @@
     &:active {
       color: var(--accent);
     }
+
+    &[aria-label='Upwork']:hover,
+    &[aria-label='Upwork']:active {
+      color: #6FDA44;
+    }
   }
 
   .navIcon {

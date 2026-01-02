@@ -35,5 +35,10 @@ export const socialLinks = [
     label: 'Itch.io',
     url: `${config.itch}`,
     icon: 'itch.io',
-  }
+  },
+  {
+    label: 'Upwork',
+    url: `${config.upwork}`,
+    icon: 'upwork',
+  },
 ];

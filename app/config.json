@@ -1,11 +1,15 @@
 {
   "name": "Diana Rehan",
   "role": "Developer",
-  "disciplines": ["VR Developer", "Game Developer"],
+  "disciplines": [
+    "VR Developer",
+    "Game Developer"
+  ],
   "url": "https://hamishw.com",
   "github": "dianarehan",
   "linkedin": "diana-rehan",
   "repo": "https://github.com/HamishMW/portfolio",
   "itch": "https://dianarehan.itch.io/",
+  "upwork": "https://upwork.com/freelancers/~016e45e5a14c79f483",
   "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n"
 }
