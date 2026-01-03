@@ -1,11 +1,11 @@
 @layer layout {
     .videoProject {
-        --sectionPadding: calc(var(--space5XL) + var(--space3XL));
+        --sectionPadding: var(--space4XL);
 
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
+        min-height: auto;
         padding-left: 140px;
         padding-right: var(--space3XL);
         padding-top: var(--sectionPadding);

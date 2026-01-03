@@ -35,4 +35,8 @@
             transform: scale(1.02);
         }
     }
+
+    .carouselOverride {
+        max-width: 100% !important;
+    }
 }

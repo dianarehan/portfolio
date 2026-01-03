@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Image } from '~/components/image';
 import styles from './simple-carousel.module.css';
 
-export function SimpleCarousel({ images, className }) {
+export function SimpleCarousel({ images, className, aspectRatio }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToPrevious = () => {
@@ -19,7 +19,7 @@ export function SimpleCarousel({ images, className }) {
 
     return (
         <div className={`${styles.carousel} ${className || ''}`}>
-            <div className={styles.imageContainer}>
+            <div className={styles.imageContainer} style={aspectRatio ? { aspectRatio } : undefined}>
                 <Image
                     className={styles.image}
                     src={images[currentIndex].src}

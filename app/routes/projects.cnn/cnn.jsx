@@ -8,6 +8,7 @@ import {
     ProjectSectionHeading,
     ProjectSectionText,
     ProjectTextRow,
+    ProjectSectionColumns,
 } from '~/layouts/project';
 import { Fragment } from 'react';
 import { baseMeta } from '~/utils/meta';
@@ -66,15 +67,44 @@ export const CNN = () => {
                     </ProjectSectionContent>
                 </ProjectSection> */}
                 <ProjectSection>
-                    <ProjectSectionContent>
-                        <ProjectTextRow>
-                            <ProjectSectionHeading>Project Screenshots</ProjectSectionHeading>
-                            <ProjectSectionText>
-                                Visualizations and results from the CNN facial personality profiling model. Use the arrows to navigate.
-                            </ProjectSectionText>
-                        </ProjectTextRow>
-                        <SimpleCarousel images={screenshots} />
-                    </ProjectSectionContent>
+                    <ProjectSectionColumns width="full" className="cnn-columns" style={{ alignItems: 'start', gridTemplateColumns: '1.5fr 1fr' }}>
+                        <div className="cnn-media" style={{ paddingRight: 'var(--spaceM)' }}>
+                            <ProjectTextRow>
+                                <ProjectSectionHeading>Project Gallery</ProjectSectionHeading>
+                                <ProjectSectionText>
+                                    The gallery below showcases the model's visualizations and live testing results from our <strong>Berlin Workshop</strong>, where users interacted with the system in a real-world setting. Use the arrows to navigate.
+                                </ProjectSectionText>
+                            </ProjectTextRow>
+                            <div style={{ marginTop: 'var(--spaceL)' }}>
+                                <SimpleCarousel className={styles.carouselOverride} aspectRatio="9/16" images={screenshots} />
+                            </div>
+                        </div>
+
+                        <div className="cnn-text">
+                            <ProjectTextRow width="full">
+                                <ProjectSectionHeading>About the Project</ProjectSectionHeading>
+                                <ProjectSectionText>
+                                    This end-to-end Machine Learning application predicts <strong>"Big Five" personality traits</strong> (OCEAN) by analyzing facial biometric data. The system utilizes a custom Convolutional Neural Network (CNN) to map facial micro-features to psychological profiles.
+                                    <br /><br />
+                                    <strong>Key Features:</strong>
+                                    <br />
+                                    • <strong>Biometric Analysis:</strong> Processes 64x64 facial inputs to detect traits: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.
+                                    <br />
+                                    • <strong>Real-time Inference:</strong> A React-based frontend communicates with a Flask REST API for instant scoring.
+                                    <br />
+                                    • <strong>Trait Classification:</strong> Categorizes results into High, Moderate, or Low intensity for each trait.
+                                    <br /><br />
+                                    <strong>Technical Stack:</strong>
+                                    <br />
+                                    • <strong>ML Framework:</strong> TensorFlow, Keras (CNN), NumPy
+                                    <br />
+                                    • <strong>Backend:</strong> Python (Flask)
+                                    <br />
+                                    • <strong>Frontend:</strong> React.js
+                                </ProjectSectionText>
+                            </ProjectTextRow>
+                        </div>
+                    </ProjectSectionColumns>
                 </ProjectSection>
             </ProjectContainer>
             <Footer />

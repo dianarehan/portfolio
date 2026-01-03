@@ -69,13 +69,43 @@ export const Tripal = () => {
                 </ProjectSection> */}
                 <ProjectSection>
                     <ProjectSectionContent>
+                        <SimpleCarousel images={screenshots} />
+
                         <ProjectTextRow>
-                            <ProjectSectionHeading>Project Screenshots</ProjectSectionHeading>
+                            <ProjectSectionHeading>About the Project</ProjectSectionHeading>
                             <ProjectSectionText>
-                                Explore different pages and features of the Tripal website. Use the arrows to navigate.
+                                <strong>Tripal</strong> is a full-stack travel marketplace built using the <strong>MERN stack</strong>.
+                                <br /><br />
+                                The platform features a sophisticated <strong>Role-Based Access Control (RBAC)</strong> system, tailoring the experience for five distinct user types: Tourists, Tour Guides, Sellers, Advertisers, and Admins.
+                            </ProjectSectionText>
+
+                            <ProjectSectionHeading>Key Features</ProjectSectionHeading>
+                            <ProjectSectionText>
+                                • <strong>Multi-Role User Management:</strong> Secure authentication and personalized dashboards for tourists, guides, sellers, and advertisers.
+                                <br /><br />
+                                • <strong>End-to-End Travel Booking:</strong> A centralized hub for tourists to discover and book activities, itineraries, hotels, flights, and transportation.
+                                <br /><br />
+                                • <strong>Integrated E-commerce:</strong> A dedicated marketplace where sellers manage product inventories and tourists can browse, review, and purchase travel essentials.
+                                <br /><br />
+                                • <strong>Financial & Loyalty System:</strong> Secure payment processing with integrated cancellation policies and a <strong>Loyalty Points</strong> system that rewards users for bookings.
+                                <br /><br />
+                                • <strong>Reviews & Social Proof:</strong> A transparent rating system allowing users to review activities, products, and tour guides.
+                                <br /><br />
+                                • <strong>Administrative Command Center:</strong> Comprehensive admin tools for user moderation, profile approvals, and complaint resolution.
+                                <br /><br />
+                                • <strong>Real-time Notifications:</strong> Automated updates for booking confirmations, and promotional offers
+                                <br /><br />
+                                <strong>Technical Stack:</strong>
+                                <br />
+                                • <strong>Frontend:</strong> React.js, Tailwind CSS / Styled Components
+                                <br />
+                                • <strong>Backend:</strong> Node.js, Express.js
+                                <br />
+                                • <strong>Database:</strong> MongoDB (Mongoose ODM)
+                                <br />
+                                • <strong>Authentication:</strong> JWT (JSON Web Tokens) & Bcrypt
                             </ProjectSectionText>
                         </ProjectTextRow>
-                        <SimpleCarousel images={screenshots} />
                     </ProjectSectionContent>
                 </ProjectSection>
             </ProjectContainer>

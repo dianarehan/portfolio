@@ -1,4 +1,5 @@
 import tripalHomepage from '~/assets/tripal/homepage.jpg';
+import { Button } from '~/components/button';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { ProjectSummary } from '../home/project-summary';
@@ -96,6 +97,21 @@ export default function PersonalProjects() {
                 buttonText="View Project"
                 buttonLink="/projects/cnn"
             />
+
+            {/* GitHub CTA */}
+            <Section className={styles.header}>
+                <Heading level={2} align="center" style={{ marginBottom: 'var(--spaceM)' }}>
+                    More on GitHub
+                </Heading>
+                <Text align="center" style={{ marginBottom: 'var(--spaceXL)', maxWidth: '600px', marginInline: 'auto' }}>
+                    I have many more open-source projects, experiments, and contributions available on my GitHub profile.
+                </Text>
+                <div style={{ display: 'flex', justifyContent: 'center', marginTop: 'var(--spaceL)' }}>
+                    <Button href={`https://github.com/${config.github}`} iconEnd="arrow-right">
+                        Visit GitHub
+                    </Button>
+                </div>
+            </Section>
 
             <Footer />
         </div>
