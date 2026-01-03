@@ -11,7 +11,7 @@ function isExternalLink(href) {
 }
 
 export const Button = forwardRef(({ href, ...rest }, ref) => {
-  if (isExternalLink(href) || !href) {
+  if (isExternalLink(href) || !href || rest.download || rest.target) {
     return <ButtonContent href={href} ref={ref} {...rest} />;
   }
 
