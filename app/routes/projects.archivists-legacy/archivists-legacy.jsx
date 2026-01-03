@@ -16,8 +16,6 @@ import { baseMeta } from '~/utils/meta';
 import styles from './archivists-legacy.module.css';
 
 import boxOpenGif from '~/assets/game/boxopen-ezgif.com-video-to-gif-converter.gif';
-import convoGif from '~/assets/game/convo-ezgif.com-video-to-gif-converter.gif';
-import flowersGif from '~/assets/game/pickupflowers-ezgif.com-video-to-gif-converter.gif';
 
 const title = 'Archivists Legacy Prototype';
 const description = 'A narrative escape room where you must preserve a mafia empire\'s history before it\'s purged.';
@@ -55,18 +53,8 @@ export const ArchivistsLegacy = () => {
                     <ProjectSectionColumns centered className="archivists-columns">
                         <div className="archivists-media">
                             <ProjectImage
-                                src={convoGif}
-                                alt="Dialogue system interaction"
-                                style={{ marginBottom: 'var(--spaceM)' }}
-                            />
-                            <ProjectImage
                                 src={boxOpenGif}
                                 alt="Opening an archival box"
-                                style={{ marginBottom: 'var(--spaceM)' }}
-                            />
-                            <ProjectImage
-                                src={flowersGif}
-                                alt="Collecting flowers in the environment"
                             />
                         </div>
                         <div className="archivists-text">
