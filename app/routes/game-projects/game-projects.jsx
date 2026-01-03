@@ -111,7 +111,7 @@ export default function GameProjects() {
                 visible={visibleSections.includes(gameProject3.current)}
                 index={3}
                 title="Timeout"
-                description="A game about time management and strategic decision making."
+                description="A meta-narrative troll game where you hunt and delete 'time.exe' across a chaotic virtual desktop."
                 buttonText="View Game"
                 buttonLink="/projects/timeout"
                 model={{
