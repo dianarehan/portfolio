@@ -1,6 +1,6 @@
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
-import { Carousel } from '~/components/carousel';
+import { SimpleCarousel } from '~/components/simple-carousel';
 import {
     ProjectContainer,
     ProjectHeader,
@@ -75,12 +75,7 @@ export const Tripal = () => {
                                 Explore different pages and features of the Tripal website. Use the arrows to navigate.
                             </ProjectSectionText>
                         </ProjectTextRow>
-                        <Carousel
-                            width={1280}
-                            height={800}
-                            images={screenshots}
-                            placeholder={tripalHomepage}
-                        />
+                        <SimpleCarousel images={screenshots} />
                     </ProjectSectionContent>
                 </ProjectSection>
             </ProjectContainer>

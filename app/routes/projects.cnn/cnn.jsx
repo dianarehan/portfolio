@@ -1,5 +1,5 @@
 import { Footer } from '~/components/footer';
-import { Carousel } from '~/components/carousel';
+import { SimpleCarousel } from '~/components/simple-carousel';
 import {
     ProjectContainer,
     ProjectHeader,
@@ -50,7 +50,7 @@ export const CNN = () => {
                     url="https://www.youtube.com/watch?v=VApflOkXT0I"
                     linkLabel="Watch Demo"
                 />
-                <ProjectSection padding="top">
+                {/* <ProjectSection padding="top">
                     <ProjectSectionContent>
                         <div className={styles.videoWrapper}>
                             <iframe
@@ -64,7 +64,7 @@ export const CNN = () => {
                             />
                         </div>
                     </ProjectSectionContent>
-                </ProjectSection>
+                </ProjectSection> */}
                 <ProjectSection>
                     <ProjectSectionContent>
                         <ProjectTextRow>
@@ -73,12 +73,7 @@ export const CNN = () => {
                                 Visualizations and results from the CNN facial personality profiling model. Use the arrows to navigate.
                             </ProjectSectionText>
                         </ProjectTextRow>
-                        <Carousel
-                            width={900}
-                            height={900}
-                            images={screenshots}
-                            placeholder={cnn1}
-                        />
+                        <SimpleCarousel images={screenshots} />
                     </ProjectSectionContent>
                 </ProjectSection>
             </ProjectContainer>
