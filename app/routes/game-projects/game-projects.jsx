@@ -147,7 +147,7 @@ export default function GameProjects() {
                 visible={visibleSections.includes(gameProject5.current)}
                 index={5}
                 title="Archivists Legacy Prototype"
-                description="A narrative-driven adventure game prototype exploring archives and historical mysteries."
+                description="A narrative escape room where you must preserve a mafia empire's history before it's purged."
                 videoId="X-nktLuP6Ho"
                 buttonText="View Game"
                 buttonLink="/projects/archivists-legacy"

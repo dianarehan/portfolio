@@ -27,7 +27,7 @@ export const MuseumHeist = () => {
                     title={title}
                     description={description}
                     // TODO: Add your Itch.io or game URL here
-                    url="#"
+                    url="https://dianarehan.itch.io/museum-heist"
                 />
                 <ProjectSection padding="top">
                     <ProjectSectionContent>

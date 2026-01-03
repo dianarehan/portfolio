@@ -27,7 +27,7 @@ export const Timeout = () => {
                     title={title}
                     description={description}
                     // TODO: Add your game URL here
-                    url="#"
+                    url="https://dianarehan.itch.io/time-out"
                 />
                 <ProjectSection padding="top">
                     <ProjectSectionContent>
