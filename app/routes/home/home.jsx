@@ -1,18 +1,12 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
+import itchScreenshot from '~/assets/portfolioScreenshot.png';
+import timeoutTexture from '~/assets/jobless.png';
 import tempoDashTexture from '~/assets/tempodash-game.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
 import { Profile } from './profile';
 import { ProjectSummary } from './project-summary';
+import { VideoProject } from './video-project';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
@@ -39,8 +33,8 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Game Developer',
-    description: `Portfolio of ${config.name} — a unity developer working on vr and 3D entertainment and educational games.`,
+    title: 'XR & Game Developer',
+    description: `Portfolio of ${config.name} — a VR/XR developer and game developer working on immersive experiences.`,
   });
 };
 
@@ -48,13 +42,28 @@ export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
   const intro = useRef();
-  const projectOne = useRef();
-  const projectTwo = useRef();
-  const projectThree = useRef();
+  // VR Projects
+  const vrProject1 = useRef();
+  const vrProject2 = useRef();
+  // Personal Projects (Games)
+  const gameProject1 = useRef();
+  const gameProject2 = useRef();
+  const gameProject3 = useRef();
+  const gameProject4 = useRef();
+  // Details section
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [
+      intro,
+      vrProject1,
+      vrProject2,
+      gameProject1,
+      gameProject2,
+      gameProject3,
+      gameProject4,
+      details,
+    ];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -96,13 +105,61 @@ export const Home = () => {
         sectionRef={intro}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
-      <ProjectSummary
-        id="project-1"
-        sectionRef={projectOne}
-        visible={visibleSections.includes(projectOne.current)}
+
+      {/* ==================== VR PROJECTS SECTION ==================== */}
+
+      {/* VR Project 1: Dental Prototype VR Simulator */}
+      <VideoProject
+        id="vr-project-1"
+        sectionRef={vrProject1}
+        visible={visibleSections.includes(vrProject1.current)}
         index={1}
-        title="Tempo Dash Game"
-        description="3D rhythm game built in Unity."
+        title="Dental Prototype VR Simulator"
+        description="An immersive VR training simulator for dental procedures, providing hands-on practice in a safe virtual environment."
+        // TODO: Replace this placeholder video ID with your actual YouTube video ID
+        videoId="dQw4w9WgXcQ"
+        buttonText="View Details"
+        buttonLink="/projects/dental-vr"
+      />
+
+      {/* VR Project 2: Pilot Training VR Simulator */}
+      <VideoProject
+        id="vr-project-2"
+        alternate
+        sectionRef={vrProject2}
+        visible={visibleSections.includes(vrProject2.current)}
+        index={2}
+        title="Pilot Training VR Simulator"
+        description="A comprehensive VR flight training system designed to prepare pilots with realistic cockpit simulations."
+        videoId="zRXndIMaAxU"
+        buttonText="View Details"
+        buttonLink="/projects/pilot-vr"
+      />
+
+      {/* ==================== PERSONAL PROJECTS (GAMES) SECTION ==================== */}
+
+      {/* Game 1: Museum Heist */}
+      <VideoProject
+        id="personal-projects"
+        sectionRef={gameProject1}
+        visible={visibleSections.includes(gameProject1.current)}
+        index={1}
+        title="Museum Heist"
+        description="A stealth-action multiplayer game where players must plan and execute the perfect heist."
+        videoId="yuw6RDPtH_8"
+        buttonText="View Game"
+        buttonLink="/projects/museum-heist"
+      />
+
+      {/* Game 2: Tempo Dash */}
+      <ProjectSummary
+        id="game-2"
+        alternate
+        sectionRef={gameProject2}
+        visible={visibleSections.includes(gameProject2.current)}
+        index={2}
+        title="Tempo Dash"
+        description="A fast-paced 3D rhythm game built in Unity. Hit tempo-based arrows, move with precision, and vibe with the music."
         buttonText="View Game"
         buttonLink="/projects/tempo-dash"
         model={{
@@ -116,51 +173,56 @@ export const Home = () => {
           ],
         }}
       />
+
+      {/* Game 3: Timeout */}
       <ProjectSummary
-        id="project-2"
-        alternate
-        sectionRef={projectTwo}
-        visible={visibleSections.includes(projectTwo.current)}
-        index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
-        model={{
-          type: 'phone',
-          alt: 'App login screen',
-          textures: [
-            {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-3"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
+        id="game-3"
+        sectionRef={gameProject3}
+        visible={visibleSections.includes(gameProject3.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        title="Timeout"
+        description="A game about time management and strategic decision making."
+        buttonText="View Game"
+        buttonLink="/projects/timeout"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'Timeout game screenshot',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
+              srcSet: `${timeoutTexture} 1280w, ${timeoutTexture} 2560w`,
+              placeholder: timeoutTexture,
             },
           ],
         }}
       />
+
+      {/* Game 4: Itch.io Showcase */}
+      <ProjectSummary
+        id="game-4"
+        alternate
+        sectionRef={gameProject4}
+        visible={visibleSections.includes(gameProject4.current)}
+        index={4}
+        title="More Games on Itch.io"
+        description="Explore more of my games and experiments on my Itch.io page."
+        buttonText="Visit Itch.io"
+        buttonLink={config.itch}
+        model={{
+          type: 'phone',
+          alt: 'My Itch.io page showing various games',
+          textures: [
+            {
+              srcSet: `${itchScreenshot} 375w, ${itchScreenshot} 750w`,
+              placeholder: itchScreenshot,
+            },
+            {
+              srcSet: `${itchScreenshot} 375w, ${itchScreenshot} 750w`,
+              placeholder: itchScreenshot,
+            },
+          ],
+        }}
+      />
+
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
