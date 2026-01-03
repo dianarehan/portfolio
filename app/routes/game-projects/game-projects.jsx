@@ -28,9 +28,10 @@ export default function GameProjects() {
     const gameProject3 = useRef();
     const gameProject4 = useRef();
     const gameProject5 = useRef();
+    const gameProject6 = useRef();
 
     useEffect(() => {
-        const sections = [intro, gameProject1, gameProject2, gameProject3, gameProject4, gameProject5];
+        const sections = [intro, gameProject1, gameProject2, gameProject3, gameProject4, gameProject5, gameProject6];
 
         const sectionObserver = new IntersectionObserver(
             (entries, observer) => {
@@ -139,12 +140,26 @@ export default function GameProjects() {
                 buttonLink="/projects/dda-fps"
             />
 
-            {/* Game 5: Itch.io Showcase */}
-            <ProjectSummary
-                id="more-games"
+            {/* Game 5: Archivists Legacy Prototype */}
+            <VideoProject
+                id="archivists-legacy"
                 sectionRef={gameProject5}
                 visible={visibleSections.includes(gameProject5.current)}
                 index={5}
+                title="Archivists Legacy Prototype"
+                description="A narrative-driven adventure game prototype exploring archives and historical mysteries."
+                videoId="X-nktLuP6Ho"
+                buttonText="View Game"
+                buttonLink="/projects/archivists-legacy"
+            />
+
+            {/* Game 6: Itch.io Showcase */}
+            <ProjectSummary
+                id="more-games"
+                alternate
+                sectionRef={gameProject6}
+                visible={visibleSections.includes(gameProject6.current)}
+                index={6}
                 title="More Games on Itch.io"
                 description="Explore more of my games and experiments on my Itch.io page."
                 buttonText="Visit Itch.io"
