@@ -14,6 +14,7 @@ import { Fragment } from 'react';
 import { baseMeta } from '~/utils/meta';
 import anatomyGif from '~/assets/dentalsim/anatomy-ezgif.com-video-to-gif-converter.gif';
 import anatomy2Gif from '~/assets/dentalsim/anatomy2-ezgif.com-video-to-gif-converter.gif';
+import extractionGif from '~/assets/dentalsim/extraction-ezgif.com-video-to-gif-converter.gif';
 
 const title = 'Dental Prototype VR Simulator';
 const description =
@@ -55,6 +56,17 @@ export const DentalVR = () => {
                                 <ProjectImage
                                     src={anatomy2Gif}
                                     alt="Dental Procedure Simulation"
+                                />
+                            </div>
+
+                            <div style={{ height: 'var(--spaceL)' }} />
+                            <div style={{ maxWidth: '800px', width: '100%', margin: '0 auto' }}>
+                                <ProjectSectionText style={{ textAlign: 'center', marginTop: '1rem' }}>
+                                    Surgical extraction procedure using physics-based tools.
+                                </ProjectSectionText>
+                                <ProjectImage
+                                    src={extractionGif}
+                                    alt="Surgical Extraction Procedure"
                                 />
                             </div>
 
