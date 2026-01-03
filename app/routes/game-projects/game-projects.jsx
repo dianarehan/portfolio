@@ -26,9 +26,10 @@ export default function GameProjects() {
     const gameProject2 = useRef();
     const gameProject3 = useRef();
     const gameProject4 = useRef();
+    const gameProject5 = useRef();
 
     useEffect(() => {
-        const sections = [intro, gameProject1, gameProject2, gameProject3, gameProject4];
+        const sections = [intro, gameProject1, gameProject2, gameProject3, gameProject4, gameProject5];
 
         const sectionObserver = new IntersectionObserver(
             (entries, observer) => {
@@ -123,13 +124,26 @@ export default function GameProjects() {
                 }}
             />
 
-            {/* Game 4: Itch.io Showcase */}
-            <ProjectSummary
-                id="more-games"
+            {/* Game 4: DDA FPS Game */}
+            <VideoProject
+                id="dda-fps"
                 alternate
                 sectionRef={gameProject4}
                 visible={visibleSections.includes(gameProject4.current)}
                 index={4}
+                title="DDA FPS Game"
+                description="A first-person shooter featuring dynamic difficulty adjustment using Large Language Models (LLMs) to adapt gameplay in real-time."
+                videoId="6z8rV1pVdVw"
+                buttonText="View Game"
+                buttonLink="/projects/dda-fps"
+            />
+
+            {/* Game 5: Itch.io Showcase */}
+            <ProjectSummary
+                id="more-games"
+                sectionRef={gameProject5}
+                visible={visibleSections.includes(gameProject5.current)}
+                index={5}
                 title="More Games on Itch.io"
                 description="Explore more of my games and experiments on my Itch.io page."
                 buttonText="Visit Itch.io"
