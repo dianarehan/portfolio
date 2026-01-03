@@ -7,6 +7,10 @@ export const navLinks = [
     pathname: '/game-projects',
   },
   {
+    label: 'Personal Projects',
+    pathname: '/personal-projects',
+  },
+  {
     label: 'Details',
     pathname: '/#details',
   },

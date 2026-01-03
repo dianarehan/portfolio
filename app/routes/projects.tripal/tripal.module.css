@@ -1,0 +1,18 @@
+@layer layout {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: var(--spaceL);
+        margin-top: var(--spaceXL);
+    }
+
+    .galleryImage {
+        border-radius: var(--borderRadiusM);
+        overflow: hidden;
+        transition: transform var(--durationM) var(--bezierFastoutSlowin);
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}

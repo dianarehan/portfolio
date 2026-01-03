@@ -52,7 +52,7 @@
   .button {
     border: 0;
     margin: 0;
-    background: none;
+    background: color-mix(in lab, var(--background) 80%, transparent);
     width: 70px;
     aspect-ratio: 1 / 1;
     grid-area: 1 / 1;
@@ -61,6 +61,9 @@
     cursor: pointer;
     display: grid;
     place-items: center;
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    transition: background var(--durationM) var(--bezierFastoutSlowin);
 
     &::before {
       content: '';
@@ -69,27 +72,25 @@
       transition-property: background, box-shadow;
       transition-duration: var(--durationM);
       transition-timing-function: var(--bezierFastoutSlowin);
-      clip-path: polygon(
-        0 0,
-        100% 0,
-        100% calc(100% - 12px),
-        calc(100% - 12px) 100%,
-        0 100%
-      );
+      border-radius: 50%;
+    }
+
+    &:hover {
+      background: color-mix(in lab, var(--accent) 90%, transparent);
     }
 
     &:hover::before {
-      background: color-mix(in lab, var(--white) 10%, transparent);
+      background: transparent;
     }
 
     & svg {
       position: relative;
       left: var(--offset);
-      fill: var(--white);
+      fill: var(--text);
     }
 
     @media (--mediaMobile) {
-      display: none;
+      width: 50px;
     }
 
     &[data-prev='true'] {

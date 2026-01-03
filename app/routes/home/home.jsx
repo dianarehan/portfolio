@@ -97,7 +97,7 @@ export const Home = () => {
         title="Dental Prototype VR Simulator"
         description="An immersive VR training simulator for dental procedures, providing hands-on practice in a safe virtual environment."
         // TODO: Replace this placeholder video ID with your actual YouTube video ID
-        videoId="dQw4w9WgXcQ"
+        videoId="rVsoI9lu_0M"
         buttonText="View Details"
         buttonLink="/projects/dental-vr"
       />
