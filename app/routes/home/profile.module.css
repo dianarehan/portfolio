@@ -23,7 +23,8 @@
     overflow-x: hidden;
   }
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile),
+  (--mediaMobileLS) {
     padding-right: var(--spaceOuter);
     padding-left: var(--spaceOuter);
   }
@@ -139,5 +140,43 @@
   &[data-visible='true'] {
     transform: none;
     opacity: 1;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  gap: var(--spaceM);
+  margin-bottom: var(--spaceXL);
+  opacity: 0;
+  transition: opacity var(--durationXL) ease var(--durationL);
+
+  &[data-visible='true'] {
+    opacity: 1;
+  }
+
+  @media (--mediaMobile) {
+    flex-direction: column;
+  }
+}
+
+.pdfViewer {
+  width: 100%;
+  opacity: 0;
+  transition: opacity var(--durationXL) ease var(--durationXL);
+
+  &[data-visible='true'] {
+    opacity: 1;
+  }
+}
+
+.pdfFrame {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: var(--borderRadiusL);
+  background: var(--backgroundLight);
+
+  @media (--mediaMobile) {
+    height: 400px;
   }
 }

@@ -1,6 +1,7 @@
 import profileImgLarge from '~/assets/profile-large.jpg';
 import profileImgPlaceholder from '~/assets/profile-placeholder.jpg';
 import profileImg from '~/assets/profile.jpg';
+// CV is now in public folder - accessible at /Diana-Rehan-CV.pdf
 import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
 import { Divider } from '~/components/divider';
@@ -23,7 +24,7 @@ const ProfileText = ({ visible, titleId }) => (
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I’m Diana, currently working as a VR developer intern at{' '}
       <Link href="https://www.it-qan.com/">ITQAN for smart solutions</Link>. My portfolio includes personal games developed during game jams in my free time, alongside professional VR interaction scenarios created as part of my work.
-       If you’re interested in the tools and software I
+      If you’re interested in the tools and software I
       use check out my <Link href="/uses">uses page</Link>.
     </Text>
     {/* <Text className={styles.description} data-visible={visible} size="l" as="p">
@@ -52,15 +53,15 @@ export const Profile = ({ id, visible, sectionRef }) => {
       <Transition in={visible || focused} timeout={0}>
         {({ visible, nodeRef }) => (
           <div className={styles.content} ref={nodeRef}>
-                        <div className={styles.column}>
+            <div className={styles.column}>
               <div className={styles.tag} aria-hidden>
-              <Divider
+                <Divider
                   notchWidth="64px"
                   notchHeight="8px"
                   collapsed={!visible}
                   collapseDelay={1000}
                 />
-                <br/>
+                <br />
                 <div className={styles.tagText} data-visible={visible}>
                   About me
                 </div>
@@ -83,15 +84,36 @@ export const Profile = ({ id, visible, sectionRef }) => {
             </div>
             <div className={styles.column}>
               <ProfileText visible={visible} titleId={titleId} />
-              {/* <Button
-                secondary
-                className={styles.button}
-                data-visible={visible}
-                href="/contact"
-                icon="send"
-              >
-                Send me a message
-              </Button> */}
+              <div className={styles.buttonGroup} data-visible={visible}>
+                <Button
+                  secondary
+                  className={styles.button}
+                  data-visible={visible}
+                  href="/Diana-Rehan-CV.pdf"
+                  icon="download"
+                  download="Diana-Rehan-CV.pdf"
+                >
+                  Download CV
+                </Button>
+                <Button
+                  secondary
+                  className={styles.button}
+                  data-visible={visible}
+                  href="/Diana-Rehan-CV.pdf"
+                  target="_blank"
+                  icon="link"
+                >
+                  View CV
+                </Button>
+              </div>
+              {/* PDF Viewer */}
+              <div className={styles.pdfViewer} data-visible={visible}>
+                <iframe
+                  src="/Diana-Rehan-CV.pdf"
+                  title="Diana Rehan CV"
+                  className={styles.pdfFrame}
+                />
+              </div>
             </div>
 
           </div>
