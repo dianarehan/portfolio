@@ -50,11 +50,19 @@ export const DdaFps = () => {
                         <ProjectTextRow>
                             <ProjectSectionHeading>About the Project</ProjectSectionHeading>
                             <ProjectSectionText>
-                                {/* TODO: Add detailed project description here */}
-                                This FPS game implements dynamic difficulty adjustment (DDA) powered by
-                                Large Language Models. The system analyzes player performance in real-time
-                                and adjusts game parameters to maintain an optimal challenge level,
-                                ensuring an engaging experience for players of all skill levels.
+                                Developed as part of a <strong>Bachelor Thesis</strong>, this FPS serves as a testing ground for <strong>Dynamic Difficulty Adjustment (DDA)</strong> powered by Large Language Models (LLMs). The system captures real-time performance data and utilizes an LLM backend to balance gameplay dynamically, ensuring a tailored challenge for any skill level.
+                                <br /><br />
+                                <strong>Core Systems:</strong>
+                                <br />
+                                • <strong>LLM Data Pipeline:</strong> Tracks detailed round stats—including accuracy, headshots, health management, and ammo consumption—feeding them into the LLM for real-time difficulty balancing.
+                                <br />
+                                • <strong>Dynamic Spawner Logic:</strong> Enemy and resource spawns are triggered procedurally based on the DDA system's output to maintain optimal player "flow."
+                                <br />
+                                • <strong>Combat Mechanics:</strong> Features tactical sniper scope zooming with FOV reduction, smooth weapon switching, and a comprehensive health/medkit system.
+                                <br />
+                                • <strong>Zombie AI Behavior:</strong> Sophisticated enemy logic including patrolling, chasing, and varied attack patterns (melee and projectiles).
+                                <br />
+                                • <strong>Advanced HUD & UX:</strong> Includes a real-time minimap for situational awareness, a card collection system from fallen enemies, and immersive VFX/SFX (muzzle flashes, explosions).
                             </ProjectSectionText>
                         </ProjectTextRow>
                     </ProjectSectionContent>

@@ -34,7 +34,7 @@ export const Timeout = () => {
                     // TODO: Add your game URL here
                     url="https://dianarehan.itch.io/time-out"
                 />
-                <ProjectSection padding="top">
+                {/* <ProjectSection padding="top">
                     <ProjectSectionContent>
                         <ProjectTextRow>
                             <ProjectSectionHeading>About the Game</ProjectSectionHeading>
@@ -44,7 +44,7 @@ export const Timeout = () => {
                             </ProjectSectionText>
                         </ProjectTextRow>
                     </ProjectSectionContent>
-                </ProjectSection>
+                </ProjectSection> */}
 
                 <ProjectSection>
                     <ProjectSectionColumns centered className="timeout-columns">
@@ -66,10 +66,19 @@ export const Timeout = () => {
                         </div>
                         <div className="timeout-text">
                             <ProjectTextRow>
-                                <ProjectSectionHeading>Gameplay Mechanics</ProjectSectionHeading>
+                                <ProjectSectionHeading>About the Project</ProjectSectionHeading>
                                 <ProjectSectionText>
-                                    Experience the tension of managing server loads while defending against cyber attacks.
-                                    Navigate through the system interface to monitor status, potential threats, and execute countermeasures before time runs out.
+                                    <strong>C/Time out</strong> is a meta-fictional "troll" game set within a simulated OS. Your mission is to achieve timelessness by hunting down and deleting the <strong>time.exe</strong> file before the clock wins.
+                                    <br /><br />
+                                    <strong>Key Features:</strong>
+                                    <br />
+                                    • <strong>Desktop Navigation:</strong> Scour nested folders and hidden directories within a nostalgic, Windows-inspired UI.
+                                    <br />
+                                    • <strong>Ad Warfare:</strong> Battle relentless, obstructive pop-up ads designed to protect the system and hinder your progress.
+                                    <br />
+                                    • <strong>Troll Mechanics:</strong> Encounter deceptive UI elements and intentional "glitches" that challenge your persistence.
+                                    <br />
+                                    • <strong>The Objective:</strong> Locate and destroy the clock to become truly Timeless.
                                 </ProjectSectionText>
                             </ProjectTextRow>
                         </div>
