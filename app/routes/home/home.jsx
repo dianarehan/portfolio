@@ -100,7 +100,7 @@ export const Home = () => {
         sectionRef={vrProject1}
         visible={visibleSections.includes(vrProject1.current)}
         index={1}
-        title="Dental Prototype VR Simulator"
+        title="Dental VR Simulator Prototype"
         description="An immersive VR training simulator for dental procedures, providing hands-on practice in a safe virtual environment."
         // TODO: Replace this placeholder video ID with your actual YouTube video ID
         videoId="rVsoI9lu_0M"
@@ -116,7 +116,7 @@ export const Home = () => {
         visible={visibleSections.includes(vrProject2.current)}
         index={2}
         title="Pilot Training VR Simulator"
-        description="A comprehensive VR flight training system designed to prepare pilots with realistic cockpit simulations."
+        description="A comprehensive VR flight training system designed to prepare pilots to master jet engine mechanics and aircraft systems."
         videoId="zRXndIMaAxU"
         buttonText="View Details"
         buttonLink="/projects/pilot-vr"
