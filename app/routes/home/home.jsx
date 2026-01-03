@@ -1,3 +1,4 @@
+import { Heading } from '~/components/heading';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -87,6 +88,11 @@ export const Home = () => {
       />
 
       {/* ==================== VR/WORK PROJECTS SECTION ==================== */}
+      <div className={styles.sectionHeader}>
+        <Heading level={2} as="h2" align="center">
+          Professional Work
+        </Heading>
+      </div>
 
       {/* VR Project 1: Dental Prototype VR Simulator */}
       <VideoProject

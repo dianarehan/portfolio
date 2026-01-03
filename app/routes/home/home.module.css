@@ -1,3 +1,9 @@
 .home {
   overflow-x: hidden;
 }
+
+.sectionHeader {
+  max-width: var(--maxWidthL);
+  margin: 0 auto;
+  padding: var(--space2XL) var(--spaceL) 0;
+}

@@ -81,8 +81,9 @@
       position: absolute;
       inset-inline-start: var(--spaceS);
       inset-inline-end: var(--spaceS);
-      block-size: 4px;
-      background: var(--accent);
+      block-size: 100%;
+      background: color-mix(in srgb, var(--accent) 30%, transparent);
+      z-index: -1;
       transform: scaleY(0) translateZ(0);
       transform-origin: bottom;
     }

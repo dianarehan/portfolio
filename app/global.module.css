@@ -35,8 +35,8 @@
   }
 
   :global(::selection) {
-    background: var(--accent);
-    color: var(--black);
+    background: color-mix(in srgb, var(--accent) 30%, transparent);
+    color: inherit;
   }
 
   :global(:focus) {
