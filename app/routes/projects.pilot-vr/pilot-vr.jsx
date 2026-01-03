@@ -27,6 +27,7 @@ export const PilotVR = () => {
                     title={title}
                     description={description}
                     url="https://www.youtube.com/watch?v=zRXndIMaAxU"
+                    linkLabel="Watch Demo"
                 />
                 <ProjectSection padding="top">
                     <ProjectSectionContent>

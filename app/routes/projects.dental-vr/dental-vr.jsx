@@ -28,6 +28,7 @@ export const DentalVR = () => {
                     description={description}
                     // TODO: Add your project URL here
                     url="#"
+                    linkLabel="Watch Demo"
                 />
                 <ProjectSection padding="top">
                     <ProjectSectionContent>

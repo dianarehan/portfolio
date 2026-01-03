@@ -6,7 +6,7 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        padding-left: var(--space3XL);
+        padding-left: 140px;
         padding-right: var(--space3XL);
         padding-top: var(--sectionPadding);
         padding-bottom: var(--sectionPadding);
