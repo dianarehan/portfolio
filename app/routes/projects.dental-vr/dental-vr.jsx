@@ -35,10 +35,10 @@ export const DentalVR = () => {
                     linkLabel="Watch Demo"
                 />
                 <ProjectSection padding="top">
-                    <ProjectSectionColumns centered className="dental-columns">
-                        <div className="dental-media">
+                    <ProjectSectionColumns className="dental-columns" style={{ alignItems: 'start' }}>
+                        <div className="dental-media" style={{ paddingRight: 'var(--spaceM)' }}>
                             <div style={{ maxWidth: '800px', width: '100%', margin: '0 auto' }}>
-                                <ProjectSectionText style={{ textAlign: 'center', marginTop: '1rem' }}>
+                                <ProjectSectionText style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                     Detailed anatomy simulation allowing students to visualize tooth details.
                                 </ProjectSectionText>
                                 <ProjectImage
