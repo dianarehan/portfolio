@@ -1,4 +1,5 @@
-import itchScreenshot from '~/assets/portfolioScreenshot.png';
+import itchScreenshot1 from '~/assets/WhatsApp Image 2026-01-03 at 2.59.38 PM.jpeg';
+import itchScreenshot2 from '~/assets/WhatsApp Image 2026-01-03 at 2.59.12 PM.jpeg';
 import timeoutTexture from '~/assets/jobless.png';
 import tempoDashTexture from '~/assets/tempodash-game.png';
 import { Footer } from '~/components/footer';
@@ -153,12 +154,12 @@ export default function GameProjects() {
                     alt: 'My Itch.io page showing various games',
                     textures: [
                         {
-                            srcSet: `${itchScreenshot} 375w, ${itchScreenshot} 750w`,
-                            placeholder: itchScreenshot,
+                            srcSet: `${itchScreenshot1} 375w, ${itchScreenshot1} 750w`,
+                            placeholder: itchScreenshot1,
                         },
                         {
-                            srcSet: `${itchScreenshot} 375w, ${itchScreenshot} 750w`,
-                            placeholder: itchScreenshot,
+                            srcSet: `${itchScreenshot2} 375w, ${itchScreenshot2} 750w`,
+                            placeholder: itchScreenshot2,
                         },
                     ],
                 }}
