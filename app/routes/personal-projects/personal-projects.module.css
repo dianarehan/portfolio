@@ -1,0 +1,30 @@
+@layer layout {
+    .personalProjects {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space5XL) var(--space3XL);
+        text-align: center;
+        min-height: 40vh;
+
+        @media (--mediaTablet) {
+            padding: var(--space3XL) var(--spaceL);
+        }
+    }
+
+    .title {
+        margin-bottom: var(--spaceL);
+    }
+
+    .description {
+        max-width: 600px;
+        color: var(--textLight);
+    }
+}

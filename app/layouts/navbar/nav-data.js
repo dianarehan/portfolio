@@ -4,7 +4,7 @@ import config from '~/config.json';
 export const navLinks = [
   {
     label: 'Personal Projects',
-    pathname: '/#personal-projects',
+    pathname: '/personal-projects',
   },
   {
     label: 'Details',

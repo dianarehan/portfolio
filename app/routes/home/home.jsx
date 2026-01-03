@@ -1,11 +1,7 @@
-import itchScreenshot from '~/assets/portfolioScreenshot.png';
-import timeoutTexture from '~/assets/jobless.png';
-import tempoDashTexture from '~/assets/tempodash-game.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
 import { Profile } from './profile';
-import { ProjectSummary } from './project-summary';
 import { VideoProject } from './video-project';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
@@ -42,28 +38,12 @@ export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
   const intro = useRef();
-  // VR Projects
   const vrProject1 = useRef();
   const vrProject2 = useRef();
-  // Personal Projects (Games)
-  const gameProject1 = useRef();
-  const gameProject2 = useRef();
-  const gameProject3 = useRef();
-  const gameProject4 = useRef();
-  // Details section
   const details = useRef();
 
   useEffect(() => {
-    const sections = [
-      intro,
-      vrProject1,
-      vrProject2,
-      gameProject1,
-      gameProject2,
-      gameProject3,
-      gameProject4,
-      details,
-    ];
+    const sections = [intro, vrProject1, vrProject2, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -106,11 +86,11 @@ export const Home = () => {
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
 
-      {/* ==================== VR PROJECTS SECTION ==================== */}
+      {/* ==================== VR/WORK PROJECTS SECTION ==================== */}
 
       {/* VR Project 1: Dental Prototype VR Simulator */}
       <VideoProject
-        id="vr-project-1"
+        id="work-projects"
         sectionRef={vrProject1}
         visible={visibleSections.includes(vrProject1.current)}
         index={1}
@@ -136,93 +116,7 @@ export const Home = () => {
         buttonLink="/projects/pilot-vr"
       />
 
-      {/* ==================== PERSONAL PROJECTS (GAMES) SECTION ==================== */}
-
-      {/* Game 1: Museum Heist */}
-      <VideoProject
-        id="personal-projects"
-        sectionRef={gameProject1}
-        visible={visibleSections.includes(gameProject1.current)}
-        index={1}
-        title="Museum Heist"
-        description="A stealth-action multiplayer game where players must plan and execute the perfect heist."
-        videoId="yuw6RDPtH_8"
-        buttonText="View Game"
-        buttonLink="/projects/museum-heist"
-      />
-
-      {/* Game 2: Tempo Dash */}
-      <ProjectSummary
-        id="game-2"
-        alternate
-        sectionRef={gameProject2}
-        visible={visibleSections.includes(gameProject2.current)}
-        index={2}
-        title="Tempo Dash"
-        description="A fast-paced 3D rhythm game built in Unity. Hit tempo-based arrows, move with precision, and vibe with the music."
-        buttonText="View Game"
-        buttonLink="/projects/tempo-dash"
-        model={{
-          type: 'laptop',
-          alt: 'Tempo Dash game',
-          textures: [
-            {
-              srcSet: `${tempoDashTexture} 1280w, ${tempoDashTexture} 2560w`,
-              placeholder: tempoDashTexture,
-            },
-          ],
-        }}
-      />
-
-      {/* Game 3: Timeout */}
-      <ProjectSummary
-        id="game-3"
-        sectionRef={gameProject3}
-        visible={visibleSections.includes(gameProject3.current)}
-        index={3}
-        title="Timeout"
-        description="A game about time management and strategic decision making."
-        buttonText="View Game"
-        buttonLink="/projects/timeout"
-        model={{
-          type: 'laptop',
-          alt: 'Timeout game screenshot',
-          textures: [
-            {
-              srcSet: `${timeoutTexture} 1280w, ${timeoutTexture} 2560w`,
-              placeholder: timeoutTexture,
-            },
-          ],
-        }}
-      />
-
-      {/* Game 4: Itch.io Showcase */}
-      <ProjectSummary
-        id="game-4"
-        alternate
-        sectionRef={gameProject4}
-        visible={visibleSections.includes(gameProject4.current)}
-        index={4}
-        title="More Games on Itch.io"
-        description="Explore more of my games and experiments on my Itch.io page."
-        buttonText="Visit Itch.io"
-        buttonLink={config.itch}
-        model={{
-          type: 'phone',
-          alt: 'My Itch.io page showing various games',
-          textures: [
-            {
-              srcSet: `${itchScreenshot} 375w, ${itchScreenshot} 750w`,
-              placeholder: itchScreenshot,
-            },
-            {
-              srcSet: `${itchScreenshot} 375w, ${itchScreenshot} 750w`,
-              placeholder: itchScreenshot,
-            },
-          ],
-        }}
-      />
-
+      {/* ==================== ABOUT/DETAILS SECTION ==================== */}
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
