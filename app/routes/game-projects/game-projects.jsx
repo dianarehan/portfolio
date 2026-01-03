@@ -10,16 +10,16 @@ import { Heading } from '~/components/heading';
 import { Text } from '~/components/text';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
-import styles from './personal-projects.module.css';
+import styles from './game-projects.module.css';
 
 export const meta = () => {
     return baseMeta({
-        title: 'Personal Projects',
-        description: `Personal game projects by ${config.name} — indie games and experiments.`,
+        title: 'Game Projects',
+        description: `Game projects by ${config.name} — indie games and experiments.`,
     });
 };
 
-export const PersonalProjects = () => {
+export default function GameProjects() {
     const [visibleSections, setVisibleSections] = useState([]);
     const intro = useRef();
     const gameProject1 = useRef();
@@ -54,14 +54,14 @@ export const PersonalProjects = () => {
     }, [visibleSections]);
 
     return (
-        <div className={styles.personalProjects}>
+        <div className={styles.gameProjects}>
             {/* Page Header */}
             <Section className={styles.header} ref={intro}>
                 <Heading level={1} className={styles.title}>
-                    Personal Projects
+                    Game Projects
                 </Heading>
                 <Text size="l" className={styles.description}>
-                    A collection of my indie games and personal experiments.
+                    A collection of my indie games and experiments.
                 </Text>
             </Section>
 
@@ -153,6 +153,4 @@ export const PersonalProjects = () => {
             <Footer />
         </div>
     );
-};
-
-export default PersonalProjects;
+}

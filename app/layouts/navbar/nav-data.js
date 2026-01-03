@@ -3,8 +3,8 @@ import config from '~/config.json';
 
 export const navLinks = [
   {
-    label: 'Personal Projects',
-    pathname: '/personal-projects',
+    label: 'Game Projects',
+    pathname: '/game-projects',
   },
   {
     label: 'Details',
