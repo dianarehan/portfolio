@@ -1,0 +1,70 @@
+@layer layout {
+    .videoWrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        border-radius: var(--borderRadiusL);
+        overflow: hidden;
+        background: var(--backgroundLight);
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: var(--borderRadiusL);
+    }
+
+    .videosRow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spaceL);
+        margin-top: var(--spaceM);
+    }
+
+    @media (max-width: 768px) {
+        .videosRow {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .roleImages {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spaceXL);
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        .roleImages {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .roleCard {
+        text-align: center;
+    }
+
+    .roleCard img {
+        width: 100%;
+        border-radius: var(--borderRadiusL);
+        margin-bottom: var(--spaceS);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .gifContainer {
+        max-width: 500px;
+    }
+
+    .caption {
+        text-align: center;
+        margin-top: var(--spaceS);
+        font-style: italic;
+        opacity: 0.8;
+    }
+}

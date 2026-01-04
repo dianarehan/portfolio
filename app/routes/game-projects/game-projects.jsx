@@ -1,5 +1,6 @@
 import itchScreenshot1 from '~/assets/WhatsApp Image 2026-01-03 at 2.59.38 PM.jpeg';
 import itchScreenshot2 from '~/assets/WhatsApp Image 2026-01-03 at 2.59.12 PM.jpeg';
+import museumTexture from '~/assets/museum/Gemini_Generated_Image_dcw5swdcw5swdcw5 (1).png';
 import timeoutTexture from '~/assets/jobless.png';
 import tempoDashTexture from '~/assets/tempodash-game.png';
 import { Footer } from '~/components/footer';
@@ -69,16 +70,25 @@ export default function GameProjects() {
             </Section>
 
             {/* Game 1: Museum Heist */}
-            <VideoProject
+            <ProjectSummary
                 id="museum-heist"
                 sectionRef={gameProject1}
                 visible={visibleSections.includes(gameProject1.current)}
                 index={1}
                 title="Museum Heist"
-                description="A stealth-action multiplayer game where players must plan and execute the perfect heist."
-                videoId="yuw6RDPtH_8"
+                description="A multiplayer asymmetric game: 1 Guard vs 5 Thieves with proximity voice chat."
                 buttonText="View Game"
                 buttonLink="/projects/museum-heist"
+                model={{
+                    type: 'laptop',
+                    alt: 'Museum Heist guard objectives',
+                    textures: [
+                        {
+                            srcSet: `${museumTexture} 1280w, ${museumTexture} 2560w`,
+                            placeholder: museumTexture,
+                        },
+                    ],
+                }}
             />
 
             {/* Game 2: Tempo Dash */}
