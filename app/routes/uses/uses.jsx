@@ -45,37 +45,46 @@ export const Uses = () => {
                 <List>
                   <ListItem>
                     <Link href="https://www.figma.com">Figma</Link> is my primary tool for
-                    UI design these days.
+                    UI/UX design and prototyping.
                   </ListItem>
                   <ListItem>
-                    For planning and organizing I use{' '}
-                    <Link href="https://trello.com/">Trello</Link>, it really made my life easier. 
+                    For deep planning and documentation, I rely on <Link href="https://www.notion.so/">Notion</Link>,
+                    while using <Link href="https://trello.com/">Trello</Link> for agile task tracking.
                   </ListItem>
                   <ListItem>
-                    I use{' '}
-                    <Link href="https://www.canva.com/">Canva</Link> for really quick designs for my games when puplishing out a game jam on <Link href="https://dianarehan.itch.io/">itch.io</Link>
+                    I use <Link href="https://www.canva.com/">Canva</Link> for rapid asset creation when
+                    publishing game jam projects on <Link href="https://dianarehan.itch.io/">itch.io</Link>.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Blender</strong> is my go-to for quick models manipulation and optimization (not an expert).
                   </ListItem>
                 </List>
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
+
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
-              <ProjectSectionHeading>Development tools</ProjectSectionHeading>
+              <ProjectSectionHeading>Development Tools</ProjectSectionHeading>
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    I basically use <Link href="https://unity.com/products/unity-engine">Unity</Link> as my current game engine,
-                    hopefully I’ll be able to switch to <Link href="https://www.unrealengine.com/en-US/">Unreal Engine</Link> in the future.
+                    I specialize in <Link href="https://unity.com/">Unity</Link> for games and VR cross-platform development,
+                    with a focus on <strong>Meta Quest 3</strong> VR experiences.
                   </ListItem>
                   <ListItem>
-                    Brave is my main browser for both development and general use.
+                    I build full-stack web applications using the <Link href="https://www.mongodb.com/mern-stack">MERN stack</Link>,
+                    using <strong>Postman</strong> for rigorous API testing.
                   </ListItem>
                   <ListItem>
-                  I often work with the <Link href="https://www.mongodb.com/mern-stack">MERN stack</Link> (MongoDB, Express.js, React, Node.js) for full-stack web development projects.
-                </ListItem>
+                    <strong>GitHub</strong> is essential to my workflow for version control and
+                    collaborative development.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Brave</strong> is my primary browser for performance-heavy web development and debugging.
+                  </ListItem>
                 </List>
               </ProjectSectionText>
             </ProjectTextRow>
