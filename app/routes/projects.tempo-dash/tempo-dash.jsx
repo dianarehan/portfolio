@@ -101,24 +101,41 @@ export const SmartSparrow = () => {
           title={title}
           description={description}
           url="https://dianarehan.itch.io/tempo-dash"
-          // roles={roles}
+        // roles={roles}
         />
 
         <ProjectSection padding="top">
-          <ProjectSectionContent>
-              <ProjectSectionHeading as='h5'>Featuring Tame Impala XD</ProjectSectionHeading>
-            <ProjectImage
-              raised
-              key={theme}
-              srcSet={
-                `${tempoDashGIF} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
-              }
-              width={1280}
-              height={800}
-              sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-              alt="Dancing GIF of a character in a 3D environment with a colourful background."
-            />
-          </ProjectSectionContent>
+          <ProjectSectionColumns style={{ gridTemplateColumns: '1fr 2fr', gap: 'var(--spaceXL)' }}>
+            <div>
+              <ProjectTextRow>
+                <ProjectSectionHeading>About the Game</ProjectSectionHeading>
+                <ProjectSectionText>
+                  <strong>Tempo Dash</strong> features multiple soundtracks to play with, each offering a unique rhythm experience.
+                  <br /><br />
+                  • <strong>Dynamic Rhythm:</strong> Gameplay changes according to the selected track's tempo and beat.
+                  <br />
+                  • <strong>Music Visualization:</strong> Real-time audio-reactive visuals that pulse with the music.
+                  <br />
+                  • <strong>Cool Lighting:</strong> Dynamic lighting effects that sync with the beat.
+                  <br />
+                  • <strong>Dance Moves:</strong> Stylish character animations that groove to the rhythm.
+                </ProjectSectionText>
+              </ProjectTextRow>
+            </div>
+            <div>
+              <ProjectImage
+                raised
+                key={theme}
+                srcSet={
+                  `${tempoDashGIF} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
+                }
+                width={1280}
+                height={800}
+                sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
+                alt="Dancing GIF of a character in a 3D environment with a colourful background."
+              />
+            </div>
+          </ProjectSectionColumns>
         </ProjectSection>
         {/* <ProjectSection>
           <ProjectTextRow>
@@ -153,7 +170,7 @@ export const SmartSparrow = () => {
               alt={``}
               sizes="100vw"
             /> */}
-            {/* <ProjectTextRow>
+        {/* <ProjectTextRow>
               <SegmentedControl
                 currentIndex={themes.indexOf(theme)}
                 onChange={handleThemeChange}
@@ -162,7 +179,7 @@ export const SmartSparrow = () => {
                 <SegmentedControlOption>Light theme</SegmentedControlOption>
               </SegmentedControl>
             </ProjectTextRow> */}
-            {/* <ProjectTextRow>
+        {/* <ProjectTextRow>
               <ProjectSectionHeading>The aero design system</ProjectSectionHeading>
               <ProjectSectionText>
                 To streamline the design process across designers and engineers for such a
@@ -172,7 +189,7 @@ export const SmartSparrow = () => {
                 the product itself as well as the website and marketing material.
               </ProjectSectionText>
             </ProjectTextRow> */}
-          {/* </ProjectSectionContent>
+        {/* </ProjectSectionContent>
         </ProjectSection> */}
         {/* <ProjectSection>
           <ProjectSectionContent>

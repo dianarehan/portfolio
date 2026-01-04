@@ -79,7 +79,7 @@
 }
 
 .tag {
-  margin-top: 220px;
+  margin-top: 10px;
   margin-bottom: 40px;
   display: grid;
   grid-template-columns: var(--space4XL) 1fr;
@@ -92,9 +92,10 @@
 }
 
 .tagText {
-  font-size: var(--fontSizeBodyS);
+  font-size: var(--fontSizeH3);
   font-weight: var(--fontWeightMedium);
   color: var(--primary);
+  white-space: nowrap;
   opacity: 0;
   transition-property: opacity;
   transition-timing-function: var(--bezierFastoutSlowin);

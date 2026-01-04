@@ -22,10 +22,11 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Diana, currently working as a VR developer intern at{' '}
-      <Link href="https://www.it-qan.com/">ITQAN for smart solutions</Link>. My portfolio includes personal games developed during game jams in my free time, alongside professional VR interaction scenarios created as part of my work.
+      I’m Diana, a Game & VR Developer and a senior at the <strong>German University in Cairo (GUC)</strong>. My portfolio includes some of the <strong>professional projects</strong> I have worked on, as well as <strong>games</strong> I have developed during <strong>game jams</strong> in my free time.
+      I have also some experience with web development and machine learning.
       If you’re interested in the tools and software I
       use check out my <Link href="/uses">uses page</Link>.
+      Feel free to check my CV below.
     </Text>
     {/* <Text className={styles.description} data-visible={visible} size="l" as="p">
       In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
