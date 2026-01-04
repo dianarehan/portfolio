@@ -22,7 +22,7 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Diana, a Game & VR Developer and a senior at the <strong>German University in Cairo (GUC)</strong>. My portfolio includes some of the <strong>professional projects</strong> I have worked on, as well as <strong>games</strong> I have developed during <strong>game jams</strong> in my free time.
+      I’m Diana, a Game & VR Developer and a senior computer engineer student at the <strong>German University in Cairo (GUC)</strong>. My portfolio includes some of the <strong>professional projects</strong> I have worked on, as well as <strong>games</strong> I have developed during <strong>game jams</strong> in my free time.
       I have also some experience with web development and machine learning.
       If you’re interested in the tools and software I
       use check out my <Link href="/uses">uses page</Link>.

@@ -82,9 +82,6 @@ export const Uses = () => {
                     <strong>GitHub</strong> is essential to my workflow for version control and
                     collaborative development.
                   </ListItem>
-                  <ListItem>
-                    <strong>Brave</strong> is my primary browser for performance-heavy web development and debugging.
-                  </ListItem>
                 </List>
               </ProjectSectionText>
             </ProjectTextRow>
