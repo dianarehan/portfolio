@@ -16,6 +16,8 @@ import { baseMeta } from '~/utils/meta';
 import styles from './archivists-legacy.module.css';
 
 import boxOpenGif from '~/assets/game/boxopen-ezgif.com-video-to-gif-converter.gif';
+import convoGif from '~/assets/game/convo-ezgif.com-video-to-gif-converter.gif';
+import flowersGif from '~/assets/game/pickupflowers-ezgif.com-video-to-gif-converter.gif';
 
 const title = 'Archivists Legacy Prototype';
 const description = 'A narrative escape room where you must preserve a mafia empire\'s history before it\'s purged.';
@@ -52,10 +54,27 @@ export const ArchivistsLegacy = () => {
                 <ProjectSection>
                     <ProjectSectionColumns centered className="archivists-columns">
                         <div className="archivists-media">
-                            <ProjectImage
-                                src={boxOpenGif}
-                                alt="Opening an archival box"
-                            />
+                            <div style={{ marginBottom: 'var(--spaceL)', textAlign: 'center' }}>
+                                <ProjectImage
+                                    src={convoGif}
+                                    alt="Dialogue system interaction"
+                                />
+                                <ProjectSectionText><em>Implementation of dialogue to reveal narrative</em></ProjectSectionText>
+                            </div>
+                            <div style={{ marginBottom: 'var(--spaceL)', textAlign: 'center' }}>
+                                <ProjectImage
+                                    src={boxOpenGif}
+                                    alt="Opening an archival box"
+                                />
+                                <ProjectSectionText><em>Solving a puzzle using a key</em></ProjectSectionText>
+                            </div>
+                            <div style={{ textAlign: 'center' }}>
+                                <ProjectImage
+                                    src={flowersGif}
+                                    alt="Collecting flowers in the environment"
+                                />
+                                <ProjectSectionText><em>3D person quests</em></ProjectSectionText>
+                            </div>
                         </div>
                         <div className="archivists-text">
                             <ProjectTextRow>
