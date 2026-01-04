@@ -14,6 +14,7 @@ import { Fragment } from 'react';
 import { baseMeta } from '~/utils/meta';
 import cockpitGif from '~/assets/itqan/Cookpit2-ezgif.com-optimize.gif';
 import f16Gif from '~/assets/itqan/ezgif.com-optimize.gif';
+import assemblyGif from '~/assets/itqan/Assembly-Disassembly-Trim-ezgif.com-video-to-gif-converter.gif';
 
 const title = 'Pilot Training VR Simulator';
 const description =
@@ -59,6 +60,19 @@ export const PilotVR = () => {
                                     <ProjectImage
                                         src={f16Gif}
                                         alt="F16 Aerodynamics simulation"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* GIF 3: Assembly */}
+                            <div style={{ paddingBottom: 'var(--spaceL)' }}>
+                                <ProjectSectionText style={{ textAlign: 'center', marginBottom: '1rem' }}>
+                                    Assembly and disassembly mechanic.
+                                </ProjectSectionText>
+                                <div style={{ maxWidth: '800px', width: '100%', margin: '0 auto' }}>
+                                    <ProjectImage
+                                        src={assemblyGif}
+                                        alt="Aircraft engine assembly and disassembly"
                                     />
                                 </div>
                             </div>
