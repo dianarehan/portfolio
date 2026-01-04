@@ -12,7 +12,6 @@ import {
 } from '~/layouts/project';
 import { Fragment } from 'react';
 import { baseMeta } from '~/utils/meta';
-import assemblyGif from '~/assets/itqan/Assembly-Disassembly-Trim-ezgif.com-optimize.gif';
 import cockpitGif from '~/assets/itqan/Cookpit2-ezgif.com-optimize.gif';
 import f16Gif from '~/assets/itqan/ezgif.com-optimize.gif';
 
@@ -60,19 +59,6 @@ export const PilotVR = () => {
                                     <ProjectImage
                                         src={f16Gif}
                                         alt="F16 Aerodynamics simulation"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* GIF 3: Assembly */}
-                            <div>
-                                <ProjectSectionText style={{ textAlign: 'center', marginBottom: '1rem' }}>
-                                    Detailed engine assembly and internal mechanics.
-                                </ProjectSectionText>
-                                <div style={{ maxWidth: '800px', width: '100%', margin: '0 auto' }}>
-                                    <ProjectImage
-                                        src={assemblyGif}
-                                        alt="Aircraft engine assembly and disassembly"
                                     />
                                 </div>
                             </div>
