@@ -33,26 +33,6 @@ export default defineConfig({
       },
     }),
     jsconfigPaths(),
-    {
-      name: 'html-transform',
-      transformIndexHtml(html) {
-        return html.replace(
-          '<head>',
-          `<head>
-    <meta property="og:image" content="https://dianarehan.github.io/portfolio/social-image.png" />
-    <meta property="og:image:width" content="1280" />
-    <meta property="og:image:height" content="800" />
-    <meta property="og:title" content="Diana Rehan | Software Engineer" />
-    <meta property="og:description" content="Portfolio of Diana Rehan - Software Engineer & XR Developer" />
-    <meta property="og:url" content="https://dianarehan.github.io/portfolio" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:site" content="@diana_rehan" />
-    <meta property="twitter:creator" content="@diana_rehan" />
-    <meta property="twitter:title" content="Diana Rehan | Software Engineer" />
-    <meta property="twitter:description" content="Portfolio of Diana Rehan - Software Engineer & XR Developer" />
-    <meta property="twitter:image" content="https://dianarehan.github.io/portfolio/social-image.png" />`
-        );
-      },
-    },
   ],
 });
+
