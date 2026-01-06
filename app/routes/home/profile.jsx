@@ -90,7 +90,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   secondary
                   className={styles.button}
                   data-visible={visible}
-                  href="/Diana-Rehan-CV.pdf"
+                  href="/portfolio/Diana-Rehan-CV.pdf"
                   icon="download"
                   download="Diana-Rehan-CV.pdf"
                 >
@@ -100,7 +100,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   secondary
                   className={styles.button}
                   data-visible={visible}
-                  href="/Diana-Rehan-CV.pdf"
+                  href="/portfolio/Diana-Rehan-CV.pdf"
                   target="_blank"
                   icon="link"
                 >
@@ -110,7 +110,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
               {/* PDF Viewer */}
               <div className={styles.pdfViewer} data-visible={visible}>
                 <iframe
-                  src="/Diana-Rehan-CV.pdf"
+                  src="/portfolio/Diana-Rehan-CV.pdf"
                   title="Diana Rehan CV"
                   className={styles.pdfFrame}
                 />
