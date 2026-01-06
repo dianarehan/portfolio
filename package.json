@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "npm run build && wrangler pages deploy ./build/client --project-name dianarehan",
+    "deploy": "npm run build && gh-pages -d build/client",
     "build": "remix vite:build",
     "dev": "node ./scripts/dev.cjs && remix vite:dev",
     "start": "wrangler pages dev ./build/client",
@@ -22,7 +22,9 @@
     "@mdx-js/react": "^3.0.1",
     "@remix-run/cloudflare": "^2.7.1",
     "@remix-run/cloudflare-pages": "^2.7.1",
+    "@remix-run/node": "^2.17.2",
     "@remix-run/react": "^2.7.1",
+    "@remix-run/serve": "^2.17.2",
     "framer-motion": "11.0.5",
     "isbot": "^4.1.0",
     "miniflare": "^3.20231030.4",
