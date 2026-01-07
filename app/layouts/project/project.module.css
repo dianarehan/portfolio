@@ -65,9 +65,11 @@
 
     &[data-padding='top'] {
       padding-top: var(--sectionPadding);
+      padding-bottom: 0;
     }
 
     &[data-padding='bottom'] {
+      padding-top: 0;
       padding-bottom: var(--sectionPadding);
     }
 
@@ -107,30 +109,22 @@
       inset: 0;
       transition: var(--durationM) ease;
       transition-property: --background1, --background2, --background3;
-      background: linear-gradient(
-          var(--background1) 0%,
+      background: linear-gradient(var(--background1) 0%,
           var(--background2) 20%,
-          var(--background3) 100%
-        ),
-        linear-gradient(
-          var(--background3) 0%,
+          var(--background3) 100%),
+        linear-gradient(var(--background3) 0%,
           var(--background2) 80%,
-          var(--background1) 100%
-        );
+          var(--background1) 100%);
 
       @supports (background: linear-gradient(in lab, red, red)) {
-        background: linear-gradient(
-            in lab,
+        background: linear-gradient(in lab,
             var(--background1) 0%,
             var(--background2) 20%,
-            var(--background3) 100%
-          ),
-          linear-gradient(
-            in lab,
+            var(--background3) 100%),
+          linear-gradient(in lab,
             var(--background3) 0%,
             var(--background2) 80%,
-            var(--background1) 100%
-          );
+            var(--background1) 100%);
       }
     }
   }
@@ -264,8 +258,7 @@
 
     @media (--mediaUseMotion) {
       opacity: 0;
-      animation: projectFadeSlide 1.4s var(--bezierFastoutSlowin) var(--initDelay)
-        forwards;
+      animation: projectFadeSlide 1.4s var(--bezierFastoutSlowin) var(--initDelay) forwards;
     }
   }
 
@@ -274,8 +267,7 @@
 
     @media (--mediaUseMotion) {
       opacity: 0;
-      animation: projectFadeSlide 1.4s var(--bezierFastoutSlowin)
-        calc(var(--initDelay) + 100ms) forwards;
+      animation: projectFadeSlide 1.4s var(--bezierFastoutSlowin) calc(var(--initDelay) + 100ms) forwards;
     }
   }
 
@@ -284,8 +276,7 @@
 
     @media (--mediaUseMotion) {
       opacity: 0;
-      animation: projectFadeSlide 1.4s var(--bezierFastoutSlowin)
-        calc(var(--initDelay) + 200ms) forwards;
+      animation: projectFadeSlide 1.4s var(--bezierFastoutSlowin) calc(var(--initDelay) + 200ms) forwards;
     }
   }
 
@@ -360,8 +351,9 @@
   }
 
   .sectionText {
-    + a,
-    + & {
+
+    +a,
+    +& {
       margin-top: var(--spaceL);
     }
   }

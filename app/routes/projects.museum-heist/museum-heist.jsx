@@ -37,7 +37,7 @@ export const MuseumHeist = () => {
                 />
 
                 {/* About the Game - Full Width */}
-                <ProjectSection padding="top">
+                <ProjectSection padding="none" className={styles.tightSection}>
                     <ProjectSectionContent width="full">
                         <ProjectTextRow width="l">
                             <ProjectSectionHeading>About the Game</ProjectSectionHeading>
@@ -51,56 +51,8 @@ export const MuseumHeist = () => {
                         </ProjectTextRow>
                     </ProjectSectionContent>
                 </ProjectSection>
-
-                {/* Role Images - Full Width Side by Side */}
-                <ProjectSection>
-                    <ProjectSectionContent width="full">
-                        <div className={styles.roleImages}>
-                            <div className={styles.roleCard}>
-                                <img src={guardImg} alt="Guard objectives" />
-                                <ProjectSectionText><strong>Guard Objectives</strong></ProjectSectionText>
-                            </div>
-                            <div className={styles.roleCard}>
-                                <img src={thievesImg} alt="Thieves objectives" />
-                                <ProjectSectionText><strong>Thieves Objectives</strong></ProjectSectionText>
-                            </div>
-                        </div>
-                    </ProjectSectionContent>
-                </ProjectSection>
-
-                {/* GIF + Tech Stack Side by Side */}
-                <ProjectSection>
-                    <ProjectSectionColumns centered>
-                        <div className={styles.gifContainer}>
-                            <ProjectImage
-                                src={glassShatterGif}
-                                alt="Glass shattering effect"
-                            />
-                            <ProjectSectionText className={styles.caption}>
-                                <em>Thief shattering glass mechanic</em>
-                            </ProjectSectionText>
-                        </div>
-                        <div>
-                            <ProjectTextRow>
-                                <ProjectSectionHeading>Technical Stack</ProjectSectionHeading>
-                                <ProjectSectionText>
-                                    • <strong>Engine:</strong> Unity
-                                    <br />
-                                    • <strong>Networking:</strong> Photon Unity Networking (PUN)
-                                    <br />
-                                    • <strong>Voice Chat:</strong> Photon Voice 2
-                                    <br />
-                                    • <strong>3D Modeling:</strong> Blender
-                                    <br />
-                                    • <strong>Character Animation:</strong> Mixamo
-                                </ProjectSectionText>
-                            </ProjectTextRow>
-                        </div>
-                    </ProjectSectionColumns>
-                </ProjectSection>
-
                 {/* Gameplay Videos - Side by Side */}
-                <ProjectSection>
+                <ProjectSection padding="none" className={styles.tightSection}>
                     <ProjectSectionContent width="full">
                         <ProjectTextRow center>
                             <ProjectSectionHeading>Gameplay Footage</ProjectSectionHeading>
@@ -131,6 +83,54 @@ export const MuseumHeist = () => {
                         </div>
                     </ProjectSectionContent>
                 </ProjectSection>
+                {/* Role Images - Full Width Side by Side */}
+                <ProjectSection padding="top">
+                    <ProjectSectionContent width="full">
+                        <div className={styles.roleImages}>
+                            <div className={styles.roleCard}>
+                                <img src={guardImg} alt="Guard objectives" />
+                                <ProjectSectionText><strong>Guard Objectives</strong></ProjectSectionText>
+                            </div>
+                            <div className={styles.roleCard}>
+                                <img src={thievesImg} alt="Thieves objectives" />
+                                <ProjectSectionText><strong>Thieves Objectives</strong></ProjectSectionText>
+                            </div>
+                        </div>
+                    </ProjectSectionContent>
+                </ProjectSection>
+
+                {/* GIF + Tech Stack Side by Side */}
+                <ProjectSection padding="top">
+                    <ProjectSectionColumns centered>
+                        <div className={styles.gifContainer}>
+                            <ProjectImage
+                                src={glassShatterGif}
+                                alt="Glass shattering effect"
+                            />
+                            <ProjectSectionText className={styles.caption}>
+                                <em>Thief shattering glass mechanic</em>
+                            </ProjectSectionText>
+                        </div>
+                        <div>
+                            <ProjectTextRow>
+                                <ProjectSectionHeading>Technical Stack</ProjectSectionHeading>
+                                <ProjectSectionText>
+                                    • <strong>Engine:</strong> Unity
+                                    <br />
+                                    • <strong>Networking:</strong> Photon Unity Networking (PUN)
+                                    <br />
+                                    • <strong>Voice Chat:</strong> Photon Voice 2
+                                    <br />
+                                    • <strong>3D Modeling:</strong> Blender
+                                    <br />
+                                    • <strong>Character Animation:</strong> Mixamo
+                                </ProjectSectionText>
+                            </ProjectTextRow>
+                        </div>
+                    </ProjectSectionColumns>
+                </ProjectSection>
+
+
             </ProjectContainer>
             <Footer />
         </Fragment>

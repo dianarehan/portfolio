@@ -67,4 +67,8 @@
         font-style: italic;
         opacity: 0.8;
     }
+
+    .tightSection {
+        padding-top: var(--spaceL) !important;
+    }
 }
