@@ -101,7 +101,7 @@ export const Home = () => {
         visible={visibleSections.includes(vrProject1.current)}
         index={1}
         title="Dental VR Simulator Prototype"
-        description="An immersive VR training simulator for dental procedures, providing hands-on practice in a safe virtual environment."
+        description="A VR training simulator for dental procedures, providing hands-on practice in a safe virtual environment."
         // TODO: Replace this placeholder video ID with your actual YouTube video ID
         videoId="rVsoI9lu_0M"
         buttonText="View Details"

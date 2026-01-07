@@ -18,7 +18,7 @@ import extractionGif from '~/assets/dentalsim/extraction-ezgif.com-video-to-gif-
 
 const title = 'Dental Prototype VR Simulator';
 const description =
-    'An immersive VR training simulator for dental procedures, providing hands-on practice in a safe virtual environment.';
+    'A VR training simulator for dental procedures, providing hands-on practice in a safe virtual environment.';
 
 export const meta = () => {
     return baseMeta({ title, description, prefix: 'Projects' });
@@ -40,7 +40,7 @@ export const DentalVR = () => {
                         <div className="dental-media" style={{ paddingRight: 'var(--spaceM)' }}>
                             <div style={{ maxWidth: '800px', width: '100%', margin: '0 auto' }}>
                                 <ProjectSectionText style={{ textAlign: 'center', marginBottom: '1rem' }}>
-                                    Detailed anatomy simulation allowing students to visualize tooth details.
+                                    Visualize tooth anatomy.
                                 </ProjectSectionText>
                                 <ProjectImage
                                     src={anatomyGif}
@@ -51,7 +51,7 @@ export const DentalVR = () => {
                             <div style={{ height: 'var(--spaceL)' }} />
                             <div style={{ maxWidth: '800px', width: '100%', margin: '0 auto' }}>
                                 <ProjectSectionText style={{ textAlign: 'center', marginTop: '1rem' }}>
-                                    Interactive resizing and isolation of tooth layers.
+                                    Resizing and isolation of tooth layers.
                                 </ProjectSectionText>
                                 <ProjectImage
                                     src={anatomy2Gif}
@@ -62,7 +62,7 @@ export const DentalVR = () => {
                             <div style={{ height: 'var(--spaceL)' }} />
                             <div style={{ maxWidth: '800px', width: '100%', margin: '0 auto' }}>
                                 <ProjectSectionText style={{ textAlign: 'center', marginTop: '1rem' }}>
-                                    Surgical extraction procedure using physics-based tools.
+                                    Extraction procedure using physics-based tools.
                                 </ProjectSectionText>
                                 <ProjectImage
                                     src={extractionGif}
@@ -74,28 +74,25 @@ export const DentalVR = () => {
                         <div className="dental-text">
                             <ProjectTextRow width="full">
                                 <ProjectSectionHeading>About the Project</ProjectSectionHeading>
-                                <ProjectSectionText>
-                                    This VR simulation offers dental students an environment to master oral surgery and dental anatomy. It bridges the gap between textbook theory and clinical practice through two specialized modules.
+                                <ProjectSectionText as="div">
+                                    This VR simulator offers dental students an environment to learn about dental anatomy and procedures.
                                     <br /><br />
-                                    <strong>Module 1: High-Fidelity Anatomy Mode</strong>
+                                    <strong>Module 1: Anatomy Mode</strong>
                                     <br />
-                                    This mode serves as a comprehensive digital reference for oral study. Students can interact with anatomically accurate models to understand the human jaw.
-                                    <br /><br />
-                                    • <strong>Detailed Visualization:</strong> View every tooth in high fidelity, including the hidden root structures and nerve pathways.
-                                    <br />
-                                    • <strong>Interactive Manipulation:</strong> Users can rotate, resize, and isolate specific teeth.
-                                    <br />
-                                    • <strong>Nomenclature:</strong> Integrated labels provide the medical names for every component.
-                                    <br /><br /><br />
+                                    This mode allows students to interact with accurate models to understand the human jaw.
+                                    <ul style={{ paddingLeft: '40px', marginTop: '10px', marginBottom: '20px', listStyleType: 'disc', listStylePosition: 'outside' }}>
+                                        <li style={{ marginBottom: '10px' }}><strong>Visualization:</strong> View every tooth in high fidelity, including the root structures and nerve pathways.</li>
+                                        <li style={{ marginBottom: '10px' }}><strong>Interaction:</strong> Users can rotate, resize, and isolate specific teeth.</li>
+                                        <li><strong>Labels:</strong> Integrated labels provide the medical names for every component.</li>
+                                    </ul>
+
                                     <strong>Module 2: Surgical Extraction Procedure</strong>
                                     <br />
                                     A procedural simulation that tests clinical decision-making through realistic surgical scenarios.
-                                    <br /><br />
-                                    • <strong>Full Procedure Simulation:</strong> Guides the student through the step-by-step process of a tooth extraction.
-                                    <br />
-                                    • <strong>Adaptive Challenges:</strong> Features a "Broken Tooth" scenario. If the tooth structure fails, the simulation requires the student to adapt their strategy.
-                                    <br />
-                                    • <strong>Advanced Toolset:</strong> Teaches the correct application of various instruments; students must recognize when to transition from standard forceps to specialized tools to remove remaining fragments.
+                                    <ul style={{ paddingLeft: '40px', marginTop: '10px', marginBottom: '10px', listStyleType: 'disc', listStylePosition: 'outside' }}>
+                                        <li style={{ marginBottom: '10px' }}><strong>Extraction Simulation:</strong> Guides the student through the step-by-step process of a tooth extraction.</li>
+                                        <li style={{ marginBottom: '10px' }}><strong>Adaptive Challenges:</strong> Features a "Broken Tooth" scenario. If the tooth breaks, they can use another tool to remove the tooth.</li>
+                                    </ul>
                                 </ProjectSectionText>
                             </ProjectTextRow>
                             <div style={{ height: 'var(--spaceL)' }} />
@@ -106,7 +103,7 @@ export const DentalVR = () => {
                                     <br />
                                     • <strong>Engine:</strong> Unity Game Engine (C#)
                                     <br />
-                                    • <strong>XR Framework:</strong> XR Interaction Toolkit & Auto Hand VR
+                                    • <strong>XR Framework:</strong> Auto Hand VR
                                     <br />
                                     • <strong>Target Hardware:</strong> Oculus Quest 3
                                     <br />
