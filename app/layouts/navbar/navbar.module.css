@@ -226,6 +226,7 @@
 
     position: fixed;
     inset: 0;
+    z-index: var(--zIndex5);
     background: color-mix(in lab, var(--background) 70%, transparent);
     transform: translate3d(0, -100%, 0);
     transition-property: background;
