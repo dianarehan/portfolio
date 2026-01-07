@@ -69,7 +69,7 @@ export default function PersonalProjects() {
                 visible={visibleSections.includes(project1.current)}
                 index={1}
                 title="Tripal Website"
-                description="A modern travel planning website built with Next.js, featuring trip discovery and booking functionality."
+                description="A travel planning website built with Next.js, featuring trip search and booking functionality."
                 buttonText="View Project"
                 buttonLink="/projects/tripal"
                 model={{
@@ -92,7 +92,7 @@ export default function PersonalProjects() {
                 visible={visibleSections.includes(project2.current)}
                 index={2}
                 title="Facial Personality Profiling CNN"
-                description="A deep learning project using Convolutional Neural Networks to predict personality traits from facial features."
+                description="A deep learning project using Convolutional Neural Networks to predict personality traits from facial features, tested by judges in Berlin."
                 videoId="VApflOkXT0I"
                 buttonText="View Project"
                 buttonLink="/projects/cnn"
@@ -104,7 +104,7 @@ export default function PersonalProjects() {
                     More on GitHub
                 </Heading>
                 <Text align="center" style={{ marginBottom: 'var(--spaceXL)', maxWidth: '600px', marginInline: 'auto' }}>
-                    I have many more open-source projects, experiments, and contributions available on my GitHub profile.
+                    I have many more open-source projects, and experiments available on my GitHub profile.
                 </Text>
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: 'var(--spaceL)' }}>
                     <Button href={`https://github.com/${config.github}`} iconEnd="arrow-right">
