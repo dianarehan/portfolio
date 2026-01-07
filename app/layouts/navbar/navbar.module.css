@@ -1,12 +1,12 @@
 @layer layout {
-  .navbar {
+  .sidebar {
     --headerNavFontSize: calc((16 / 16) * 1rem);
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 0 var(--spaceL) 0;
+    padding: 0 0 var(--spaceS) 0;
     width: var(--space2XL);
     position: fixed;
     top: var(--spaceOuter);
@@ -14,6 +14,14 @@
     bottom: var(--spaceOuter);
     z-index: var(--zIndex4);
     isolation: isolate;
+    transition: opacity var(--durationM) ease, transform var(--durationM) ease, visibility var(--durationM) ease;
+
+    &[data-visible='false'] {
+      opacity: 0;
+      transform: translateX(calc(var(--spaceXL) * -1));
+      visibility: hidden;
+      pointer-events: none;
+    }
 
     @media (--mediaMobile) {
       --headerNavFontSize: calc((22 / 16) * 1rem);
@@ -25,10 +33,68 @@
     }
   }
 
+  .topbar {
+    --headerNavFontSize: calc((16 / 16) * 1rem);
+
+    display: flex;
+    position: fixed;
+    z-index: var(--zIndex4);
+    isolation: isolate;
+    width: 100%;
+    height: var(--space4XL);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    padding: 0 var(--spaceL);
+    background: color-mix(in lab, var(--background) 80%, transparent);
+    backdrop-filter: blur(10px);
+    transition: opacity var(--durationM) ease, transform var(--durationM) ease, visibility var(--durationM) ease;
+
+    &[data-visible='false'] {
+      opacity: 0;
+      transform: translateY(calc(var(--spaceXL) * -1));
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .logo {
+      padding: 0;
+    }
+
+    .nav {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      max-width: none;
+      width: auto;
+      flex: 1;
+      padding-right: 0;
+    }
+
+    .navList {
+      flex-direction: row;
+      transform: none;
+      writing-mode: horizontal-tb;
+      gap: var(--spaceM);
+      align-items: center;
+    }
+
+    .navLink {
+      padding: var(--spaceXS) var(--spaceS);
+    }
+
+    .navIcons {
+      display: none;
+    }
+  }
+
   .logo {
     display: flex;
     position: relative;
-    padding: var(--spaceS) var(--spaceS) var(--spaceM);
+    padding: var(--spaceS);
     z-index: var(--zIndex2);
 
     @media (--mediaMobile) {
@@ -109,7 +175,7 @@
     justify-content: center;
     position: relative;
     z-index: var(--zIndex2);
-    padding-bottom: var(--spaceM);
+    padding-bottom: 0;
 
     @media (--mediaMobile),
     (--mediaMobileLS) {
@@ -133,9 +199,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spaceS);
-    width: var(--space2XL);
-    height: var(--space2XL);
+    padding: var(--spaceXS);
+    width: var(--spaceXL);
+    height: var(--spaceXL);
     color: var(--textLight);
     transition: color var(--durationM) var(--bezierFastoutSlowin);
 

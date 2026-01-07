@@ -3,6 +3,10 @@ import config from '~/config.json';
 
 export const navLinks = [
   {
+    label: 'Home',
+    pathname: '/',
+  },
+  {
     label: 'Game Projects',
     pathname: '/game-projects',
   },

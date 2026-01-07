@@ -24,10 +24,30 @@ export const Navbar = () => {
   const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
   const scrollToHash = useScrollToHash();
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     // Prevent ssr mismatch by storing this in state
     setCurrent(`${location.pathname}${location.hash}`);
   }, [location]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Switch to horizontal when scrolled past the intro (roughly viewport height)
+      // or a bit earlier for better feel
+      const threshold = window.innerHeight - 100;
+      setIsScrolled(window.scrollY > threshold);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Check on mount
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const layout = location.pathname === '/' && !isScrolled ? 'vertical' : 'horizontal';
 
   // Handle smooth scroll nav items
   useEffect(() => {
@@ -139,8 +159,11 @@ export const Navbar = () => {
     if (menuOpen) setMenuOpen(false);
   };
 
-  return (
-    <header className={styles.navbar} ref={headerRef}>
+  const showSidebar = location.pathname === '/' && !isScrolled;
+  const showTopbar = location.pathname !== '/' || isScrolled;
+
+  const NavbarContent = ({ desktop }) => (
+    <>
       <RouterLink
         unstable_viewTransition
         prefetch="intent"
@@ -170,8 +193,20 @@ export const Navbar = () => {
             </RouterLink>
           ))}
         </div>
-        <NavbarIcons desktop />
+        <NavbarIcons desktop={desktop} />
       </nav>
+      {!isMobile && <ThemeToggle data-navbar-item />}
+    </>
+  );
+
+  return (
+    <>
+      <header className={styles.sidebar} data-visible={showSidebar}>
+        <NavbarContent desktop />
+      </header>
+      <header className={styles.topbar} data-visible={showTopbar}>
+        <NavbarContent desktop />
+      </header>
       <Transition unmount in={menuOpen} timeout={msToNum(tokens.base.durationL)}>
         {({ visible, nodeRef }) => (
           <nav className={styles.mobileNav} data-visible={visible} ref={nodeRef}>
@@ -199,8 +234,7 @@ export const Navbar = () => {
           </nav>
         )}
       </Transition>
-      {!isMobile && <ThemeToggle data-navbar-item />}
-    </header>
+    </>
   );
 };
 
