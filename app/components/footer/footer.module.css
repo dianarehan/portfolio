@@ -21,4 +21,23 @@
     padding-right: var(--spaceXS);
     display: inline-flex;
   }
+
+  .socials {
+    display: flex;
+    gap: var(--spaceL);
+    margin-top: var(--spaceL);
+    width: 100%;
+    justify-content: center;
+    order: 1;
+  }
+
+  .socialIcon {
+    display: flex;
+    transition: color var(--durationS) ease;
+    padding: var(--spaceS);
+  }
+
+  .socialIcon:hover {
+    color: var(--accent);
+  }
 }
