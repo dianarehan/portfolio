@@ -42,10 +42,11 @@ export const MuseumHeist = () => {
                         <ProjectTextRow width="l">
                             <ProjectSectionHeading>About the Game</ProjectSectionHeading>
                             <ProjectSectionText>
-                                <strong>Museum Heist</strong> is an asymmetric multiplayer experience where strategy and stealth clash head-on.
-                                One player takes on the role of the <strong>Guard</strong>, tasked with protecting the museum's precious artifacts and catching thieves.
-                                Meanwhile, <strong>5 Thieves</strong> work together (or betray each other) to steal artifacts and escape before time runs out.
-                                The game features <strong>proximity voice chat</strong> powered by Photon Voice—players can only hear others nearby, adding tension and tactical possibilities.
+                                <strong>Museum Heist</strong> is an asymmetric multiplayer game using <strong>Photon Unity Networking (PUN)</strong>.
+                                One player plays as the <strong>Guard</strong>, tasked with protecting the museum and catching thieves.
+                                Meanwhile, <strong>5 Thieves</strong> work together to steal artifacts and escape before they get caught.
+                                <br /> <br />
+                                The game features <strong>proximity voice chat</strong> powered by <strong>Photon Voice</strong>, players can only hear others nearby.
                             </ProjectSectionText>
                         </ProjectTextRow>
                     </ProjectSectionContent>
