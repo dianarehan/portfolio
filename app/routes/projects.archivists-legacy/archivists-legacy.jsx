@@ -20,7 +20,7 @@ import convoGif from '~/assets/game/convo-ezgif.com-video-to-gif-converter.gif';
 import flowersGif from '~/assets/game/pickupflowers-ezgif.com-video-to-gif-converter.gif';
 
 const title = 'Archivists Legacy Prototype';
-const description = 'A narrative escape room where you must preserve a mafia empire\'s history before it\'s purged.';
+const description = 'A narrative escape room where you must preserve a mafia empire\'s history before it\'s lost.';
 
 export const meta = () => {
     return baseMeta({ title, description, prefix: 'Projects' });
@@ -80,15 +80,15 @@ export const ArchivistsLegacy = () => {
                             <ProjectTextRow>
                                 <ProjectSectionHeading>About the Project</ProjectSectionHeading>
                                 <ProjectSectionText>
-                                    <strong>Archivist's Legacy</strong> is a Gothic puzzle prototype built in <strong>Unity 6</strong>. Players step into the role of Victor Rossi, trapped in a "locked room" scenario by antagonist Silas Thorne. The mission: solve environmental puzzles and disarm a Data Purge Device before the Syndicate's history is erased forever.
+                                    <strong>Archivist's Legacy</strong> is a puzzle prototype built in <strong>Unity 6</strong>. Player is trapped in a "locked room" scenario by his enemy, Silas Thorne. The mission: solve environmental puzzles and disarm a Data Purge Device before the Syndicate's history is erased forever.
                                     <br /><br />
                                     <strong>Core Features:</strong>
                                     <br />
                                     • <strong>Three-Stage Journey:</strong> Transitions from narrative triggers in the Church and dialogue in the Hallway to the complex puzzle loop of Volkov's Office.
                                     <br />
-                                    • <strong>Environmental Storytelling:</strong> Narrative depth delivered via audio logs, hidden documents, and visual clues.
+                                    • <strong>Environmental Storytelling:</strong> Narrative is delivered via audio logs, hidden documents, and visual clues.
                                     <br />
-                                    • <strong>Mechanics:</strong> Point-and-click interaction for object examination, code input, and inventory management.
+                                    • <strong>Mechanics:</strong> Point-and-click interaction for object examination.
                                 </ProjectSectionText>
                             </ProjectTextRow>
                             <div className={styles.buttonGroup}>
