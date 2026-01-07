@@ -162,7 +162,7 @@ export const Navbar = () => {
   const showSidebar = location.pathname === '/' && !isScrolled;
   const showTopbar = location.pathname !== '/' || isScrolled;
 
-  const NavbarContent = ({ desktop }) => (
+  const NavbarContent = ({ desktop, useSideNav }) => (
     <>
       <RouterLink
         unstable_viewTransition
@@ -178,20 +178,22 @@ export const Navbar = () => {
       <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />
       <nav className={styles.nav}>
         <div className={styles.navList}>
-          {navLinks.map(({ label, pathname }) => (
-            <RouterLink
-              unstable_viewTransition
-              prefetch="intent"
-              to={pathname}
-              key={label}
-              data-navbar-item
-              className={styles.navLink}
-              aria-current={getCurrent(pathname)}
-              onClick={handleNavItemClick}
-            >
-              {label}
-            </RouterLink>
-          ))}
+          {navLinks
+            .filter(item => !(useSideNav && item.onlyTopbar))
+            .map(({ label, pathname }) => (
+              <RouterLink
+                unstable_viewTransition
+                prefetch="intent"
+                to={pathname}
+                key={label}
+                data-navbar-item
+                className={styles.navLink}
+                aria-current={getCurrent(pathname)}
+                onClick={handleNavItemClick}
+              >
+                {label}
+              </RouterLink>
+            ))}
         </div>
         <NavbarIcons desktop={desktop} />
       </nav>
@@ -202,7 +204,7 @@ export const Navbar = () => {
   return (
     <>
       <header className={styles.sidebar} data-visible={showSidebar}>
-        <NavbarContent desktop />
+        <NavbarContent desktop useSideNav />
       </header>
       <header className={styles.topbar} data-visible={showTopbar}>
         <NavbarContent desktop />

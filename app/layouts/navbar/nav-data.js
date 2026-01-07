@@ -18,6 +18,11 @@ export const navLinks = [
     label: 'Details',
     pathname: '/#details',
   },
+  {
+    label: 'Uses',
+    pathname: '/uses',
+    onlyTopbar: true,
+  },
   // {
   //   label: 'Projects',
   //   pathname: '/articles',
