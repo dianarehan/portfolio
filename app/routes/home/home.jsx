@@ -116,7 +116,7 @@ export const Home = () => {
         visible={visibleSections.includes(vrProject2.current)}
         index={2}
         title="Pilot Training VR Simulator"
-        description="A comprehensive VR flight training system designed to prepare pilots to master jet engine mechanics and aircraft systems."
+        description="A Multiplayer VR flight training system designed for pilots using Netcode for GameObjects (NGO)."
         videoId="zRXndIMaAxU"
         buttonText="View Details"
         buttonLink="/projects/pilot-vr"
