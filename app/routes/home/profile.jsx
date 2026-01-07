@@ -22,11 +22,22 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Diana, a Game & VR Developer and a senior computer engineer student at the <strong>German University in Cairo (GUC)</strong>. My portfolio includes some of the <strong>professional projects</strong> I have worked on, as well as <strong>games</strong> I have developed during <strong>game jams</strong> in my free time.
-      I have also some experience with web development and machine learning.
+      I’m Diana, a Game & VR Developer and a senior computer engineer student at the <strong>German University in Cairo (GUC)</strong>.
+      <br />
+      <br />
+      My work focuses on:
+      <ul style={{ paddingLeft: '20px', marginTop: '10px', marginBottom: '20px', listStyle: 'disc' }}>
+        <li><strong>VR Projects</strong>: Educational Multiplayer Simulations.</li>
+        <li><strong>Multiplayer Games</strong>: Using <strong>Netcode for GameObjects (NGO)</strong> and <strong>Photon (PUN)</strong>.</li>
+        <li><strong>Unity 2D and 3D Games</strong>: Participating in game jams on itch.io.</li>
+      </ul>
+      I also have experience with web development and machine learning.
       If you’re interested in the tools and software I
       use check out my <Link href="/uses">uses page</Link>.
-      Feel free to check my CV below.
+      Feel free to check my CV.</Text>
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      I am always open to discussing new projects or creative ideas.
+      For inquiries or collaborations, please reach out via email at <Link href="mailto:daiana.rehan.dr@gmail.com">daiana.rehan.dr@gmail.com</Link>.
     </Text>
     {/* <Text className={styles.description} data-visible={visible} size="l" as="p">
       In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
@@ -82,6 +93,14 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   <use href={`${katakana}#katakana-profile`} />
                 </svg>
               </div> */}
+              {/* PDF Viewer */}
+              <div className={styles.pdfViewer} data-visible={visible}>
+                <iframe
+                  src="/portfolio/Diana-Rehan-CV.pdf"
+                  title="Diana Rehan CV"
+                  className={styles.pdfFrame}
+                />
+              </div>
             </div>
             <div className={styles.column}>
               <ProfileText visible={visible} titleId={titleId} />
@@ -107,16 +126,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   View CV
                 </Button>
               </div>
-              {/* PDF Viewer */}
-              <div className={styles.pdfViewer} data-visible={visible}>
-                <iframe
-                  src="/portfolio/Diana-Rehan-CV.pdf"
-                  title="Diana Rehan CV"
-                  className={styles.pdfFrame}
-                />
-              </div>
             </div>
-
           </div>
         )}
       </Transition>
