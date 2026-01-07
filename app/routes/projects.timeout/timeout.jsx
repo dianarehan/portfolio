@@ -18,7 +18,7 @@ import loginGif from '~/assets/timeout/timeoutlogin-ezgif.com-video-to-gif-conve
 import navGif from '~/assets/timeout/timeoutnav-ezgif.com-video-to-gif-converter.gif';
 
 const title = 'Timeout';
-const description = 'A meta-narrative troll game where you hunt and delete "time.exe" across a chaotic virtual desktop.';
+const description = 'A troll game where you hunt and delete "time.exe" across a chaotic virtual desktop.';
 
 export const meta = () => {
     return baseMeta({ title, description, prefix: 'Projects' });
@@ -68,17 +68,18 @@ export const Timeout = () => {
                             <ProjectTextRow>
                                 <ProjectSectionHeading>About the Project</ProjectSectionHeading>
                                 <ProjectSectionText>
-                                    <strong>C/Time out</strong> is a meta-fictional "troll" game set within a simulated OS. Your mission is to achieve timelessness by hunting down and deleting the <strong>time.exe</strong> file before the clock wins.
+                                    <strong>C/Time out</strong> is a "troll" game set within a simulated OS. Your mission is to achieve timelessness by hunting down and deleting the <strong>time.exe</strong> file before the clock wins.
                                     <br /><br />
                                     <strong>Key Features:</strong>
+                                    <br />                                    <br />
                                     <br />
-                                    • <strong>Desktop Navigation:</strong> Scour nested folders and hidden directories within a nostalgic, Windows-inspired UI.
+
+                                    • <strong>Desktop Navigation:</strong> Navigate through nested folders and hidden directories within a nostalgic, Windows-inspired UI.
                                     <br />
-                                    • <strong>Ad Warfare:</strong> Battle relentless, obstructive pop-up ads designed to protect the system and hinder your progress.
+                                    • <strong>Ad Warfare:</strong> Resist pop-up ads designed to protect the system and hinder your progress.
                                     <br />
-                                    • <strong>Troll Mechanics:</strong> Encounter deceptive UI elements and intentional "glitches" that challenge your persistence.
+                                    • <strong>Troll Mechanics:</strong> Find Surprises and Jokes hidden within the system.
                                     <br />
-                                    • <strong>The Objective:</strong> Locate and destroy the clock to become truly Timeless.
                                 </ProjectSectionText>
                             </ProjectTextRow>
                         </div>
