@@ -99,7 +99,7 @@ export default function GameProjects() {
                 visible={visibleSections.includes(gameProject2.current)}
                 index={2}
                 title="Tempo Dash"
-                description="A fast-paced 3D rhythm game built in Unity. Hit tempo-based arrows, move with precision, and vibe with the music."
+                description="A 3D rhythm game built in Unity. Hit tempo-based arrows, and vibe with the music."
                 buttonText="View Game"
                 buttonLink="/projects/tempo-dash"
                 model={{
@@ -144,7 +144,7 @@ export default function GameProjects() {
                 visible={visibleSections.includes(gameProject4.current)}
                 index={4}
                 title="DDA FPS Game"
-                description="A first-person shooter featuring dynamic difficulty adjustment using Large Language Models (LLMs) to adapt gameplay in real-time."
+                description="A first-person shooter featuring dynamic difficulty adjustment using LLMs to adapt gameplay in real-time."
                 videoId="6z8rV1pVdVw"
                 buttonText="View Game"
                 buttonLink="/projects/dda-fps"
@@ -157,7 +157,7 @@ export default function GameProjects() {
                 visible={visibleSections.includes(gameProject5.current)}
                 index={5}
                 title="Archivists Legacy Prototype"
-                description="A narrative escape room where you must preserve a mafia empire's history before it's purged."
+                description="A narrative escape room where you must preserve a mafia empire's history before it's lost."
                 videoId="X-nktLuP6Ho"
                 buttonText="View Game"
                 buttonLink="/projects/archivists-legacy"
