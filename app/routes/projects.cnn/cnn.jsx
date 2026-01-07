@@ -72,7 +72,7 @@ export const CNN = () => {
                             <ProjectTextRow>
                                 <ProjectSectionHeading>Project Gallery</ProjectSectionHeading>
                                 <ProjectSectionText>
-                                    The gallery below showcases the model's visualizations and live testing results from our <strong>Berlin Workshop</strong>, where users interacted with the system in a real-world setting. Use the arrows to navigate.
+                                    Live testing results in <strong>Berlin</strong>, where users tried the system and gave us feedback. Use the arrows to navigate.
                                 </ProjectSectionText>
                             </ProjectTextRow>
                             <div style={{ marginTop: 'var(--spaceL)' }}>
@@ -84,15 +84,13 @@ export const CNN = () => {
                             <ProjectTextRow width="full">
                                 <ProjectSectionHeading>About the Project</ProjectSectionHeading>
                                 <ProjectSectionText>
-                                    This end-to-end Machine Learning application predicts <strong>"Big Five" personality traits</strong> (OCEAN) by analyzing facial biometric data. The system utilizes a custom Convolutional Neural Network (CNN) to map facial micro-features to psychological profiles.
+                                    This Machine Learning application predicts <strong>"Big Five" personality traits</strong> (OCEAN) by analyzing facial data. The system utilizes a custom Convolutional Neural Network (CNN) to map facial features to psychological profiles.
                                     <br /><br />
                                     <strong>Key Features:</strong>
                                     <br />
-                                    • <strong>Biometric Analysis:</strong> Processes 64x64 facial inputs to detect traits: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.
+                                    • <strong>Biometric Analysis:</strong> Processes facial inputs to detect: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.
                                     <br />
                                     • <strong>Real-time Inference:</strong> A React-based frontend communicates with a Flask REST API for instant scoring.
-                                    <br />
-                                    • <strong>Trait Classification:</strong> Categorizes results into High, Moderate, or Low intensity for each trait.
                                     <br /><br />
                                     <strong>Technical Stack:</strong>
                                     <br />
