@@ -14,7 +14,7 @@ import styles from './dda-fps.module.css';
 
 const title = 'DDA FPS Game';
 const description =
-    'A first-person shooter featuring dynamic difficulty adjustment using Large Language Models (LLMs) to adapt gameplay in real-time.';
+    'A first-person shooter featuring dynamic difficulty adjustment using LLMs to adapt gameplay in real-time.';
 
 export const meta = () => {
     return baseMeta({ title, description, prefix: 'Projects' });
@@ -47,22 +47,22 @@ export const DdaFps = () => {
                 </ProjectSection>
                 <ProjectSection>
                     <ProjectSectionContent>
-                        <ProjectTextRow>
+                        <ProjectTextRow width="full">
                             <ProjectSectionHeading>About the Project</ProjectSectionHeading>
                             <ProjectSectionText>
-                                Developed as part of a <strong>Bachelor Thesis</strong>, this FPS serves as a testing ground for <strong>Dynamic Difficulty Adjustment (DDA)</strong> powered by Large Language Models (LLMs). The system captures real-time performance data and utilizes an LLM backend to balance gameplay dynamically, ensuring a tailored challenge for any skill level.
+                                Developed as part of a <strong>Bachelor Thesis</strong>, this FPS serves as a testing ground for <strong>Dynamic Difficulty Adjustment (DDA)</strong> powered by LLMs. The system captures real-time performance data and utilizes an LLM backend to balance gameplay dynamically.
                                 <br /><br />
                                 <strong>Core Systems:</strong>
                                 <br />
-                                • <strong>LLM Data Pipeline:</strong> Tracks detailed round stats—including accuracy, headshots, health management, and ammo consumption—feeding them into the LLM for real-time difficulty balancing.
+                                • <strong>LLM Data Pipeline:</strong> Tracks detailed stats and feeding them into the LLM for real-time difficulty balancing.
                                 <br />
-                                • <strong>Dynamic Spawner Logic:</strong> Enemy and resource spawns are triggered procedurally based on the DDA system's output to maintain optimal player "flow."
+                                • <strong>Dynamic Spawner Logic:</strong> Enemy and resource spawns based on the DDA system's output."
                                 <br />
-                                • <strong>Combat Mechanics:</strong> Features tactical sniper scope zooming with FOV reduction, smooth weapon switching, and a comprehensive health/medkit system.
+                                • <strong>Combat Mechanics:</strong> Tactical sniper scope zooming, smooth weapon switching, and a comprehensive health/medkit system.
                                 <br />
-                                • <strong>Zombie AI Behavior:</strong> Sophisticated enemy logic including patrolling, chasing, and varied attack patterns (melee and projectiles).
+                                • <strong>Zombie AI Behavior:</strong> Enemy logic including patrolling, chasing, and varied attack patterns (melee and projectiles).
                                 <br />
-                                • <strong>Advanced HUD & UX:</strong> Includes a real-time minimap for situational awareness, a card collection system from fallen enemies, and immersive VFX/SFX (muzzle flashes, explosions).
+                                • <strong>Advanced HUD & UX:</strong> Real-time minimap for situational awareness, and immersive VFX/SFX (muzzle flashes, explosions).
                             </ProjectSectionText>
                         </ProjectTextRow>
                     </ProjectSectionContent>
