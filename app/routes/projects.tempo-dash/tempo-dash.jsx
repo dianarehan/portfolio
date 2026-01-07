@@ -73,7 +73,7 @@ const EarthSection = lazy(() =>
 
 const title = 'Tempo Dash 3D rhythm game';
 const description =
-  'Get ready to dash to the rhythm in Tempo Dash, a fast-paced 3D rhythm game built in Unity! Hit tempo-based arrows, move with precision, and vibe with 3 music tracks that get your heart pumping.';
+  'A 3D rhythm game built in Unity! Hit tempo-based arrows, and vibe with 3 different music tracks.';
 
 export const meta = () => {
   return baseMeta({ title, description, prefix: 'Projects' });
@@ -110,13 +110,9 @@ export const SmartSparrow = () => {
               <ProjectTextRow>
                 <ProjectSectionHeading>About the Game</ProjectSectionHeading>
                 <ProjectSectionText>
-                  <strong>Tempo Dash</strong> features multiple soundtracks to play with, each offering a unique rhythm experience.
-                  <br /><br />
                   • <strong>Dynamic Rhythm:</strong> Gameplay changes according to the selected track's tempo and beat.
                   <br />
                   • <strong>Music Visualization:</strong> Real-time audio-reactive visuals that pulse with the music.
-                  <br />
-                  • <strong>Cool Lighting:</strong> Dynamic lighting effects that sync with the beat.
                   <br />
                   • <strong>Dance Moves:</strong> Stylish character animations that groove to the rhythm.
                 </ProjectSectionText>
