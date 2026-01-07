@@ -45,15 +45,15 @@ export const Uses = () => {
                 <List>
                   <ListItem>
                     <Link href="https://www.figma.com">Figma</Link> is my primary tool for
-                    UI/UX design and prototyping.
+                    <strong> game design</strong> workflows.
                   </ListItem>
                   <ListItem>
                     For deep planning and documentation, I rely on <Link href="https://www.notion.so/">Notion</Link>,
-                    while using <Link href="https://trello.com/">Trello</Link> for agile task tracking.
+                    while using <Link href="https://trello.com/">Trello</Link> for task tracking.
                   </ListItem>
                   <ListItem>
-                    I use <Link href="https://www.canva.com/">Canva</Link> for rapid asset creation when
-                    publishing game jam projects on <Link href="https://dianarehan.itch.io/">itch.io</Link>.
+                    I use <Link href="https://www.canva.com/">Canva</Link> for designing game logos, video editing,
+                    creating backgrounds, and crafting mostly any sort of game assets.
                   </ListItem>
                   <ListItem>
                     <strong>Blender</strong> is my go-to for quick models manipulation and optimization (not an expert).
@@ -71,8 +71,9 @@ export const Uses = () => {
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    I specialize in <Link href="https://unity.com/">Unity</Link> for games and VR cross-platform development,
-                    with a focus on <strong>Meta Quest 3</strong> VR experiences.
+                    I specialize in <Link href="https://unity.com/">Unity</Link> for <strong>Game Development</strong> and VR.
+                    I create diverse games (2D/3D, Single-player & Multiplayer) and immersive experiences for <strong>Meta Quest 3</strong>.
+                    For networking, I utilize <strong>Photon (PUN & Voice)</strong> and <strong>Netcode for GameObjects (NGO)</strong>.
                   </ListItem>
                   <ListItem>
                     I build full-stack web applications using the <Link href="https://www.mongodb.com/mern-stack">MERN stack</Link>,
