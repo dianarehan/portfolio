@@ -35,3 +35,33 @@
         display: block;
     }
 }
+
+.jamImagesRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spaceL);
+    margin-top: var(--spaceL);
+
+    @media (--mediaTablet) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.jamImageContainer {
+    border-radius: var(--spaceS);
+    overflow: hidden;
+    box-shadow: var(--shadowM);
+
+    & img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.caption {
+    text-align: center;
+    margin-top: var(--spaceS);
+    font-size: var(--fontSizeBodyS);
+    color: var(--textLight);
+}
