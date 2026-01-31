@@ -195,7 +195,7 @@
   grid-template-columns: 90px 1fr;
   gap: var(--spaceM);
   align-items: center;
-  margin-bottom: var(--spaceXL);
+  margin-bottom: var(--space2XL);
 }
 
 .indexNumber {

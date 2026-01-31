@@ -1,4 +1,5 @@
 import itchScreenshot1 from '~/assets/WhatsApp Image 2026-01-03 at 2.59.38 PM.jpeg';
+import unmaskedThumbnail from '~/assets/Unmasked/1copy.png';
 import itchScreenshot2 from '~/assets/WhatsApp Image 2026-01-03 at 2.59.12 PM.jpeg';
 import museumTexture from '~/assets/museum/Gemini_Generated_Image_dcw5swdcw5swdcw5 (1).png';
 import timeoutTexture from '~/assets/jobless.png';
@@ -30,9 +31,10 @@ export default function GameProjects() {
     const gameProject4 = useRef();
     const gameProject5 = useRef();
     const gameProject6 = useRef();
+    const gameProject7 = useRef();
 
     useEffect(() => {
-        const sections = [intro, gameProject1, gameProject2, gameProject3, gameProject4, gameProject5, gameProject6];
+        const sections = [intro, gameProject1, gameProject2, gameProject3, gameProject4, gameProject5, gameProject6, gameProject7];
 
         const sectionObserver = new IntersectionObserver(
             (entries, observer) => {
@@ -69,12 +71,35 @@ export default function GameProjects() {
                 </Text>
             </Section>
 
-            {/* Game 1: Museum Heist */}
+            {/* Game 1: Unmasked */}
             <ProjectSummary
-                id="museum-heist"
+                id="unmasked"
                 sectionRef={gameProject1}
                 visible={visibleSections.includes(gameProject1.current)}
                 index={1}
+                title="Unmasked"
+                description="In UNMASKED, you are a Blank Identity trapped in a closed arena of emotions. Dozens of masks are fighting you. This fast-paced survival game forces you to move to exist. Your only weapon is the Dash."
+                buttonText="View Game"
+                buttonLink="/projects/unmasked"
+                model={{
+                    type: 'laptop',
+                    alt: 'Unmasked game screenshot',
+                    textures: [
+                        {
+                            srcSet: `${unmaskedThumbnail} 1280w, ${unmaskedThumbnail} 2560w`,
+                            placeholder: unmaskedThumbnail,
+                        },
+                    ],
+                }}
+            />
+
+            {/* Game 2: Museum Heist */}
+            <ProjectSummary
+                id="museum-heist"
+                alternate
+                sectionRef={gameProject2}
+                visible={visibleSections.includes(gameProject2.current)}
+                index={2}
                 title="Museum Heist"
                 description="A multiplayer asymmetric game: 1 Guard vs 5 Thieves with proximity voice chat."
                 buttonText="View Game"
@@ -94,10 +119,9 @@ export default function GameProjects() {
             {/* Game 2: Tempo Dash */}
             <ProjectSummary
                 id="tempo-dash"
-                alternate
-                sectionRef={gameProject2}
-                visible={visibleSections.includes(gameProject2.current)}
-                index={2}
+                sectionRef={gameProject3}
+                visible={visibleSections.includes(gameProject3.current)}
+                index={3}
                 title="Tempo Dash"
                 description="A 3D rhythm game built in Unity. Hit tempo-based arrows, and vibe with the music."
                 buttonText="View Game"
@@ -117,9 +141,10 @@ export default function GameProjects() {
             {/* Game 3: Timeout */}
             <ProjectSummary
                 id="timeout"
-                sectionRef={gameProject3}
-                visible={visibleSections.includes(gameProject3.current)}
-                index={3}
+                alternate
+                sectionRef={gameProject4}
+                visible={visibleSections.includes(gameProject4.current)}
+                index={4}
                 title="Timeout"
                 description="A meta-narrative troll game where you hunt and delete 'time.exe' across a chaotic virtual desktop."
                 buttonText="View Game"
@@ -139,10 +164,9 @@ export default function GameProjects() {
             {/* Game 4: DDA FPS Game */}
             <VideoProject
                 id="dda-fps"
-                alternate
-                sectionRef={gameProject4}
-                visible={visibleSections.includes(gameProject4.current)}
-                index={4}
+                sectionRef={gameProject5}
+                visible={visibleSections.includes(gameProject5.current)}
+                index={5}
                 title="DDA FPS Game"
                 description="A first-person shooter featuring dynamic difficulty adjustment using LLMs to adapt gameplay in real-time."
                 videoId="6z8rV1pVdVw"
@@ -153,9 +177,10 @@ export default function GameProjects() {
             {/* Game 5: Archivists Legacy Prototype */}
             <VideoProject
                 id="archivists-legacy"
-                sectionRef={gameProject5}
-                visible={visibleSections.includes(gameProject5.current)}
-                index={5}
+                alternate
+                sectionRef={gameProject6}
+                visible={visibleSections.includes(gameProject6.current)}
+                index={6}
                 title="Archivists Legacy Prototype"
                 description="A narrative escape room where you must preserve a mafia empire's history before it's lost."
                 videoId="X-nktLuP6Ho"
@@ -166,10 +191,9 @@ export default function GameProjects() {
             {/* Game 6: Itch.io Showcase */}
             <ProjectSummary
                 id="more-games"
-                alternate
-                sectionRef={gameProject6}
-                visible={visibleSections.includes(gameProject6.current)}
-                index={6}
+                sectionRef={gameProject7}
+                visible={visibleSections.includes(gameProject7.current)}
+                index={7}
                 title="More Games on Itch.io"
                 description="Explore more of my games and experiments on my Itch.io page."
                 buttonText="Visit Itch.io"

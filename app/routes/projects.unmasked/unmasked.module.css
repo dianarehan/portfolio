@@ -1,0 +1,37 @@
+.tightSection {
+    margin-top: var(--spaceXL);
+    margin-bottom: var(--spaceXL);
+}
+
+.videoWrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    border-radius: var(--spaceS);
+    overflow: hidden;
+    box-shadow: var(--shadowL);
+    background: var(--backgroundLight);
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gifContainer {
+    width: 100%;
+    border-radius: var(--spaceS);
+    overflow: hidden;
+    box-shadow: var(--shadowM);
+
+    & img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
