@@ -1,5 +1,8 @@
 import { Heading } from '~/components/heading';
+import { Text } from '~/components/text';
+import { Section } from '~/components/section';
 import { Footer } from '~/components/footer';
+import { Link } from '@remix-run/react';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
 import { Profile } from './profile';
@@ -86,6 +89,31 @@ export const Home = () => {
         sectionRef={intro}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
+
+      {/* ==================== RECENT NEWS SECTION ==================== */}
+      <Section className={styles.newsSection}>
+        <div className={styles.newsBanner}>
+          <span className={styles.newsIcon}>🏆</span>
+          <div className={styles.newsContent}>
+            <Heading level={4} as="h3" className={styles.newsTitle}>
+              2nd Place at Global Game Jam 2026!
+            </Heading>
+            <Text size="s" className={styles.newsText}>
+              Our game <Link to="/projects/unmasked" className={styles.newsLink}><strong>UNMASKED</strong></Link> won 2nd place. Built in 48 hours with an amazing team.
+            </Text>
+            <div className={styles.newsLinks}>
+              <a
+                href="https://www.linkedin.com/posts/diana-rehan_%F0%9D%90%94%F0%9D%90%A7%F0%9D%90%A6%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%9D-2nd-place-at-global-game-activity-7423042343982854144-E7aJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.newsLink}
+              >
+                Read more on LinkedIn →
+              </a>
+            </div>
+          </div>
+        </div>
+      </Section>
 
       {/* ==================== VR/WORK PROJECTS SECTION ==================== */}
       <div className={styles.sectionHeader}>
