@@ -96,7 +96,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
               {/* PDF Viewer */}
               <div className={styles.pdfViewer} data-visible={visible}>
                 <iframe
-                  src="/portfolio/Diana-Rehan-CV.pdf"
+                  src="/portfolio/Diana-Rehan-CV.pdf?v=20260226"
                   title="Diana Rehan CV"
                   className={styles.pdfFrame}
                 />

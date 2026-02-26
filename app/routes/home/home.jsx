@@ -96,6 +96,30 @@ export const Home = () => {
           <span className={styles.newsIcon}>🏆</span>
           <div className={styles.newsContent}>
             <Heading level={4} as="h3" className={styles.newsTitle}>
+              ITI Best VR Game — 1st Place Winner!
+            </Heading>
+            <Text size="s" className={styles.newsText}>
+              <a href="https://dianarehan.itch.io/protect-her" target="_blank" rel="noopener noreferrer" className={styles.newsLink}><strong>Protect Her</strong></a> won Best VR Game at the ITI Egypt Game Jam 2026.
+            </Text>
+            <div className={styles.newsLinks}>
+              <a
+                href="https://www.linkedin.com/posts/iti-game-development-academy_we-have-a-winner-egypt-game-jam-2026-activity-7429230601200824320-Xnby?utm_source=share&utm_medium=member_desktop&rcm=ACoAACtokXAB8xJcpgX2bYsl6mmS3sI0rkxa7x4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.newsLink}
+              >
+                Read more on LinkedIn →
+              </a>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className={styles.newsSection}>
+        <div className={styles.newsBanner}>
+          <span className={styles.newsIcon}>🏆</span>
+          <div className={styles.newsContent}>
+            <Heading level={4} as="h3" className={styles.newsTitle}>
               2nd Place at Global Game Jam 2026!
             </Heading>
             <Text size="s" className={styles.newsText}>
